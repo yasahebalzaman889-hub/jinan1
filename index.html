@@ -13,7 +13,7 @@
 body{
 font-family:'Cairo',sans-serif;
 margin:0;
-background:linear-gradient(135deg,#f8fafc,#eef3f9);
+background:#f4e9da;
 direction:rtl;
 color:#1a1a1a;
 }
@@ -21,20 +21,26 @@ color:#1a1a1a;
 /* الهيدر */
 
 .header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:20px 35px;
+position:relative;
+padding:25px;
 background:white;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
 }
+
+/* اللوغو */
 
 .logo{
-height:60px;
+position:absolute;
+right:25px;
+top:15px;
+height:75px;
 }
 
+/* اسم الجمعية */
+
 .title{
-font-size:26px;
+text-align:center;
+font-size:28px;
 font-weight:700;
 }
 
@@ -63,20 +69,20 @@ align-items:center;
 justify-content:space-between;
 text-decoration:none;
 background:white;
-padding:18px 20px;
+padding:18px 22px;
 border-radius:16px;
 font-size:18px;
 font-weight:600;
 color:#222;
-box-shadow:0 8px 25px rgba(0,0,0,0.06);
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 transition:all .25s ease;
 }
 
-/* تأثير hover */
+/* تأثير الحركة */
 
 .menu a:hover{
 transform:translateY(-4px);
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
 color:#0b3d91;
 }
 
@@ -91,16 +97,13 @@ opacity:0.6;
 
 @media (max-width:600px){
 
-.header{
-padding:15px 20px;
-}
-
 .logo{
-height:50px;
+height:60px;
+top:12px;
 }
 
 .title{
-font-size:22px;
+font-size:24px;
 }
 
 .menu a{
@@ -119,7 +122,11 @@ padding:16px;
 
 <img src="logo.png" class="logo">
 
-<div class="title">جمعية قاضي الحوائج </div></div>
+<div class="title">جمعية قاضي الحوائج </div>
+
+</div>
+
+
 <div class="container">
 
 <div class="menu">
