@@ -6,13 +6,16 @@
 
 <title>جمعية</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 body{
-font-family: "Segoe UI", Arial, sans-serif;
+font-family:'Cairo',sans-serif;
 margin:0;
-background:linear-gradient(135deg,#f7f9fc,#eef2f7);
-direction: rtl;
+background:linear-gradient(135deg,#f8fafc,#eef3f9);
+direction:rtl;
+color:#1a1a1a;
 }
 
 /* الهيدر */
@@ -21,27 +24,24 @@ direction: rtl;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:20px 30px;
+padding:20px 35px;
 background:white;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
 .logo{
 height:60px;
-order:1;
 }
 
 .title{
 font-size:26px;
 font-weight:700;
-color:#111;
-order:2;
 }
 
 /* المحتوى */
 
 .container{
-max-width:750px;
+max-width:800px;
 margin:auto;
 padding:40px 20px;
 }
@@ -58,35 +58,49 @@ margin-top:30px;
 /* المربعات */
 
 .menu a{
+display:flex;
+align-items:center;
+justify-content:space-between;
 text-decoration:none;
 background:white;
-padding:18px;
-border-radius:14px;
+padding:18px 20px;
+border-radius:16px;
 font-size:18px;
-color:#111;
 font-weight:600;
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-transition:all 0.25s ease;
+color:#222;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+transition:all .25s ease;
 }
 
-/* تأثير الماوس */
+/* تأثير hover */
 
 .menu a:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
 color:#0b3d91;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* الموبايل */
+/* السهم */
+
+.arrow{
+font-size:20px;
+opacity:0.6;
+}
+
+/* موبايل */
 
 @media (max-width:600px){
 
-.title{
-font-size:22px;
+.header{
+padding:15px 20px;
 }
 
 .logo{
 height:50px;
+}
+
+.title{
+font-size:22px;
 }
 
 .menu a{
@@ -105,21 +119,30 @@ padding:16px;
 
 <img src="logo.png" class="logo">
 
-<div class="title">جمعية</div>
-
-</div>
-
+<div class="title">جمعية قاضي الحوائج </div></div>
 <div class="container">
 
 <div class="menu">
 
-<a href="introduction.html">المقدمة</a>
+<a href="introduction.html">
+المقدمة
+<span class="arrow">←</span>
+</a>
 
-<a href="about.html">نبذة عن تأسيس الجمعية</a>
+<a href="about.html">
+نبذة عن تأسيس الجمعية
+<span class="arrow">←</span>
+</a>
 
-<a href="strategy.html">التوجه الاستراتيجي للجمعية</a>
+<a href="strategy.html">
+التوجه الاستراتيجي للجمعية
+<span class="arrow">←</span>
+</a>
 
-<a href="goals.html">أهداف الجمعية</a>
+<a href="goals.html">
+أهداف الجمعية
+<span class="arrow">←</span>
+</a>
 
 </div>
 
