@@ -13,41 +13,38 @@
 body{
 font-family:'Cairo',sans-serif;
 margin:0;
-background:#f4e9da;
+background:#f3f5f7;
 direction:rtl;
-color:#1a1a1a;
+color:#222;
 }
 
 /* الهيدر */
 
 .header{
 position:relative;
-padding:25px;
 background:white;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
+padding:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
-
-/* اللوغو */
 
 .logo{
 position:absolute;
 right:25px;
 top:15px;
-height:75px;
+height:70px;
 }
-
-/* اسم الجمعية */
 
 .title{
 text-align:center;
 font-size:28px;
 font-weight:700;
+color:#2f8f5b;
 }
 
 /* المحتوى */
 
 .container{
-max-width:800px;
+max-width:700px;
 margin:auto;
 padding:40px 20px;
 }
@@ -57,39 +54,35 @@ padding:40px 20px;
 .menu{
 display:flex;
 flex-direction:column;
-gap:18px;
-margin-top:30px;
+gap:15px;
 }
 
 /* المربعات */
 
 .menu a{
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 text-decoration:none;
 background:white;
-padding:18px 22px;
-border-radius:16px;
+padding:18px;
+border-radius:10px;
 font-size:18px;
 font-weight:600;
 color:#222;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
+border:1px solid #e6e6e6;
 transition:all .25s ease;
 }
 
-/* تأثير الحركة */
-
 .menu a:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 30px rgba(0,0,0,0.1);
-color:#0b3d91;
+border-color:#1e5fa8;
+color:#1e5fa8;
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
 
-/* السهم */
-
 .arrow{
-font-size:20px;
+font-size:18px;
 opacity:0.6;
 }
 
@@ -98,8 +91,7 @@ opacity:0.6;
 @media (max-width:600px){
 
 .logo{
-height:60px;
-top:12px;
+height:55px;
 }
 
 .title{
@@ -108,7 +100,6 @@ font-size:24px;
 
 .menu a{
 font-size:17px;
-padding:16px;
 }
 
 }
@@ -122,10 +113,9 @@ padding:16px;
 
 <img src="logo.png" class="logo">
 
-<div class="title">جمعية قاضي الحوائج</div>
+<div class="title">جمعية</div>
 
 </div>
-
 
 <div class="container">
 
