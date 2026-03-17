@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التوجه الاستراتيجي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20; 
+            --primary-light: #4caf50;
+            --bg-gradient: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            direction: rtl;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* الهيدر */
+        .header {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .title-page {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* حاوية المحتوى */
+        .content-card {
+            background: white;
+            width: 90%;
+            max-width: 700px;
+            margin: 10px 20px 30px 20px;
+            padding: 35px 25px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.7s ease-out;
+            box-sizing: border-box;
+        }
+
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        /* تنسيق القائمة المرقمة */
+        .strategy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .strategy-item {
+            background: #f1f8e9;
+            margin-bottom: 12px;
+            padding: 15px 18px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-right: 4px solid var(--primary-light);
+            transition: transform 0.2s ease;
+        }
+
+        .strategy-item:hover {
+            transform: scale(1.02);
+            background: #e8f5e9;
+        }
+
+        .number-box {
+            background: var(--primary-dark);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .item-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .conclusion-text {
+            margin-top: 25px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* زر العودة */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .back-btn:hover {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 600px) {
+            .content-card { padding: 25px 15px; }
+            .intro-text { font-size: 15.5px; }
+            .item-text { font-size: 14.5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title-page">التوجه الاستراتيجي للجمعية</div>
+</div>
+
+<div class="content-card">
+    <div class="intro-text">
+        التوجه الاستراتيجي للجمعية، هو الإطار العام الذي يحدد رؤيتها وسبب وجودها، ورسالتها وأهدافها البعيدة المدى ويوجه قراراتها وأنشطتها لضمان تحقيق الهدف بأثر مستدام. وهذا الهدف يساهم في رفع عدد المستفيدين منها، من خلال بناء شراكات إستراتيجية مع جهات حكومية وخاصة، والسعي إلى تنويع مصادر التمويل لضمان الاستدامة المالية، وتطوير كفاءة الكوادر المتطوعين وتنمية قدرات المشتركين من خلال برامج تدريبية تساهم في بناء مجتمع واع ومنتج ومنها:
+    </div>
+
+    <div class="strategy-list">
+        <div class="strategy-item">
+            <div class="number-box">1</div>
+            <div class="item-text">إنشاء صندوق مالي عام مرخص يخدم المجتمع .</div>
+        </div>
+        <div class="strategy-item">
+            <div class="number-box">2</div>
+            <div class="item-text">إنشاء صندوق احتياطي يغطي مصاريف الجمعية الخيرية والاجتماعية لـ 6 أشهر على الأقل .</div>
+        </div>
+        <div class="strategy-item">
+            <div class="number-box">3</div>
+            <div class="item-text">تنويع مصادر الدخل (تبرعات / شركات / أوقاف / مشاريع) .</div>
+        </div>
+        <div class="strategy-item">
+            <div class="number-box">4</div>
+            <div class="item-text">إطلاق حملات موسمية منظمة تدعم صندوق الجمعية .</div>
+        </div>
+        <div class="strategy-item">
+            <div class="number-box">5</div>
+            <div class="item-text">إنشاء منصة الكترونية للتبرع واستخدام وسائل التواصل الاجتماعي لزيادة الانتشار .</div>
+        </div>
+        <div class="strategy-item">
+            <div class="number-box">6</div>
+            <div class="item-text">الوصول إلى زيادة العمل الخيري المستدام وتحسين جودة حياة الأسر المحتاجة في المجتمع .</div>
+        </div>
+        <div class="strategy-item">
+            <div class="number-box">7</div>
+            <div class="item-text">الوصول إلى تقديم خدمات ومبادرات خيرية وتنموية نوعية للفئات الأكثر احتياجاً وفقاً لأعلى معايير الشفافية والكفاءة .</div>
+        </div>
+    </div>
+
+    <div class="conclusion-text">
+        تفعيل الأنشطة الثقافية والرياضية، بالإضافة للاحتفالات العامة التي تساهم في الترابط والألفة والمحبة.
+    </div>
+</div>
+
+<a href="index.html" class="back-btn">
+    <span>→</span> العودة للرئيسية
+</a>
+
+</body>
+</html>
