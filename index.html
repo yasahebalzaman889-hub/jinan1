@@ -10,19 +10,11 @@
             --primary-dark: #1b5e20; 
             --primary-light: #4caf50;
             --bg-gradient: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
-            --text-color: #222;
         }
 
-        /* أنيميشن الظهور من الأسفل */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         body {
@@ -30,11 +22,11 @@
             margin: 0;
             direction: rtl;
             background: var(--bg-gradient);
-            color: var(--text-color);
+            color: #222;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center; /* لتوسيط المحتوى */
+            align-items: center;
         }
 
         /* الهيدر */
@@ -47,116 +39,104 @@
         }
 
         .logo {
-            height: 100px; /* تصغير قليل للوغو ليتناسب مع التصميم الأنم */
-            width: auto;
-            margin-bottom: 15px;
+            height: 100px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+            margin-bottom: 15px;
         }
 
         .title {
-            font-size: 28px; /* تصغير الخط قليلاً */
+            font-size: 28px;
             font-weight: 700;
             color: white; 
             margin: 0;
         }
 
-        /* حاوية القائمة (بدون خلفية بيضاء) */
+        /* حاوية الأزرار */
         .menu-container {
             width: 100%;
-            max-width: 500px; /* تقليل عرض الحاوية ليكون التصميم ملموم */
+            max-width: 480px;
             padding: 20px;
             box-sizing: border-box;
             flex: 1;
-            display: flex;
-            align-items: center; /* لتوسيط الأزرار عمودياً في المساحة المتاحة */
         }
 
         .menu {
             display: flex;
             flex-direction: column;
-            gap: 15px; /* المسافة بين الأزرار */
-            width: 100%;
+            gap: 15px;
         }
 
-        /* تصميم الأزرار الجديد */
         .menu a {
             display: flex;
             justify-content: space-between;
             align-items: center;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.95); /* خلفية بيضاء شفافة قليلاً */
-            padding: 15px 20px; /* تقليل الـ padding (تصغير المربع) */
-            border-radius: 50px; /* زوايا دائرية بالكامل (Pill shape) */
-            font-size: 16px; /* تصغير الخط */
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-size: 16px;
             font-weight: 600;
-            color: var(--primary-dark); /* لون النص أخضر غامق */
-            
-            /* إضافة الإطار الأخضر */
+            color: var(--primary-dark);
             border: 2px solid var(--primary-light); 
-            
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* تفعيل الأنيميشن */
+            transition: all 0.3s ease;
             animation: fadeInUp 0.6s ease-out backwards;
         }
 
-        /* توقيت الأنيميشن لكل زر (ظهور متتالي) */
-        .menu a:nth-child(1) { animation-delay: 0.1s; }
-        .menu a:nth-child(2) { animation-delay: 0.2s; }
-        .menu a:nth-child(3) { animation-delay: 0.3s; }
-        .menu a:nth-child(4) { animation-delay: 0.4s; }
-
-        /* تأثير التمرير (Hover) */
         .menu a:hover {
             background: white;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-color: var(--primary-dark); /* تغيير لون الإطار عند الهوفر */
+            transform: translateY(-3px);
+            border-color: var(--primary-dark);
         }
 
-        .arrow {
-            font-size: 18px;
-            transition: transform 0.3s ease;
-        }
-
-        .menu a:hover .arrow {
-            transform: translateX(-5px); /* تحريك السهم */
-        }
-
-        /* قسم الاتصال */
+        /* قسم الاتصال المطور */
         .contact-section {
             width: 100%;
             max-width: 600px;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
             color: white;
-            box-sizing: border-box;
-            margin-top: auto; /* ليبقى في الأسفل */
+            margin-top: auto;
         }
 
         .contact-text {
             font-size: 16px;
-            margin-bottom: 10px;
-            line-height: 1.5;
+            margin-bottom: 20px;
+            line-height: 1.6;
             opacity: 0.9;
         }
 
-        .phone-link {
-            display: inline-block;
-            color: white;
+        /* تصميم الدائرة المحيطة بالرقم */
+        .phone-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: white;
+            color: var(--primary-dark);
+            padding: 12px 25px;
+            border-radius: 50px; /* شكل كبسولة دائري */
             text-decoration: none;
             font-weight: 700;
             font-size: 20px;
-            direction: ltr; /* لعرض الرقم بشكل صحيح */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            direction: ltr; /* لضبط تنسيق الرقم والأيقونة */
         }
 
-        /* استعلامات الوسائط للموبايل */
+        .phone-circle:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .phone-circle i {
+            font-size: 22px;
+        }
+
         @media (max-width: 600px) {
-            .menu-container { max-width: 90%; padding: 10px; }
-            .logo { height: 80px; }
-            .title { font-size: 24px; }
-            .menu a { padding: 12px 18px; font-size: 15px; }
+            .menu-container { max-width: 90%; }
+            .logo { height: 85px; }
+            .phone-circle { font-size: 18px; padding: 10px 20px; }
         }
     </style>
 </head>
@@ -169,31 +149,33 @@
 
 <div class="menu-container">
     <div class="menu">
-        <a href="introduction.html">
+        <a href="introduction.html" style="animation-delay: 0.1s;">
             <span>المقدمة</span>
-            <span class="arrow">←</span>
+            <span>←</span>
         </a>
-        <a href="about.html">
+        <a href="about.html" style="animation-delay: 0.2s;">
             <span>نبذة عن تأسيس الجمعية</span>
-            <span class="arrow">←</span>
+            <span>←</span>
         </a>
-        <a href="strategy.html">
+        <a href="strategy.html" style="animation-delay: 0.3s;">
             <span>التوجه الاستراتيجي للجمعية</span>
-            <span class="arrow">←</span>
+            <span>←</span>
         </a>
-        <a href="goals.html">
+        <a href="goals.html" style="animation-delay: 0.4s;">
             <span>أهداف الجمعية</span>
-            <span class="arrow">←</span>
+            <span>←</span>
         </a>
     </div>
 </div>
 
 <div class="contact-section">
     <div class="contact-text">
-        من يرغب بالانضمام إلى <strong>جمعية قاضي الحوائج</strong> أو المساهمة في أعمالها الاتصال على الرقم:
+        من يرغب بالانضمام إلى <strong>جمعية قاضي الحوائج</strong> أو المساهمة في أعمالها، الاتصال على الرقم:
     </div>
-    <a href="tel:0096171325197" class="phone-link">
-        +961 71 32 51 97
+    
+    <a href="tel:0096171325197" class="phone-circle">
+        <span>📞</span>
+        <span>+961 71 32 51 97</span>
     </a>
 </div>
 
