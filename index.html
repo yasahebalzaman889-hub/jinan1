@@ -13,7 +13,7 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(15px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -26,31 +26,27 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center; /* لتوسيط المحتوى بالمنتصف */
         }
 
-        /* الهيدر الجديد: اللوغو والكلمة على نفس السطر */
+        /* الهيدر */
         .header {
-            width: 100%;
-            max-width: 550px; /* تقليل العرض */
-            padding: 30px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* تبدأ من اليمين */
-            gap: 15px;
-            box-sizing: border-box;
+            position: relative;
+            padding: 50px 20px 30px 20px;
+            text-align: center;
         }
 
         .logo {
-            height: 65px; /* قياس وسط واضح */
+            height: 120px;
             width: auto;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            margin-bottom: 20px;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+            transition: transform 0.3s ease;
         }
 
         .title {
-            font-size: 26px;
+            font-size: 34px;
             font-weight: 700;
-            color: white;
+            color: white; 
             margin: 0;
         }
 
@@ -58,7 +54,6 @@
         .wave-container {
             line-height: 0;
             width: 100%;
-            max-width: 550px;
         }
 
         .wave-container svg {
@@ -69,12 +64,12 @@
         /* القسم الأبيض */
         .content {
             background: white;
-            border-radius: 30px 30px 0 0;
-            padding: 30px 20px;
+            border-radius: 40px 40px 0 0;
+            padding: 40px 25px;
+            max-width: 700px;
+            margin: -2px auto 0;
+            flex: 1; /* ليأخذ المساحة المتاحة */
             width: 100%;
-            max-width: 550px; /* تقليل عرض المحتوى */
-            margin: -1px auto 0;
-            flex: 1;
             box-sizing: border-box;
             box-shadow: 0 -10px 25px rgba(0,0,0,0.1);
         }
@@ -83,8 +78,8 @@
         .menu {
             display: flex;
             flex-direction: column;
-            gap: 12px; /* تقليل المسافة بين المربعات */
-            margin-bottom: 30px;
+            gap: 18px;
+            margin-bottom: 40px;
         }
 
         .menu a {
@@ -93,9 +88,9 @@
             align-items: center;
             text-decoration: none;
             background: #f9f9f9;
-            padding: 15px 20px; /* تقليل حجم المربعات */
-            border-radius: 12px;
-            font-size: 16px; /* تصغير الخط قليلاً */
+            padding: 20px 25px;
+            border-radius: 18px;
+            font-size: 18px;
             font-weight: 600;
             color: #222;
             transition: all 0.3s ease;
@@ -106,47 +101,60 @@
         .menu a:hover {
             color: var(--primary-light);
             background: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: #eee;
         }
 
         .arrow {
-            opacity: 0.5;
-            font-size: 18px;
+            opacity: 0.6;
+            font-size: 22px;
+            color: var(--primary-light);
         }
 
-        /* قسم الاتصال المحدث: بدون مربعات متداخلة */
-        .contact-area {
-            width: 100%;
-            max-width: 550px;
-            padding: 30px 20px;
+        /* قسم الاتصال (بأسفل الصفحة في المنطقة الخضراء) */
+        .contact-section {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
+            padding: 25px;
+            border-radius: 20px;
             text-align: center;
             color: white;
-            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease backwards;
+            animation-delay: 0.6s;
         }
 
-        .contact-area p {
-            font-size: 16px;
-            margin: 0 0 10px 0;
+        .contact-text {
+            font-size: 18px;
+            margin-bottom: 15px;
             line-height: 1.6;
-            opacity: 0.9;
         }
 
-        .phone-number {
-            display: block;
-            font-size: 22px;
-            font-weight: 700;
-            color: white;
+        .phone-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: var(--primary-dark);
+            padding: 12px 25px;
+            border-radius: 50px;
             text-decoration: none;
-            direction: ltr; /* لعرض الرقم بشكل صحيح */
+            font-weight: 700;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-link:hover {
+            transform: scale(1.05);
+            background: #f0f0f0;
         }
 
         @media (max-width: 600px) {
-            .header, .content, .wave-container, .contact-area {
-                max-width: 90%; /* للموبايلات الصغيرة */
-            }
-            .title { font-size: 22px; }
-            .logo { height: 55px; }
+            .logo { height: 95px; }
+            .title { font-size: 26px; }
+            .contact-text { font-size: 16px; }
+            .phone-link { font-size: 18px; }
         }
     </style>
 </head>
@@ -154,7 +162,7 @@
 
 <div class="header">
     <img src="logo.png" class="logo" alt="Logo">
-    <h1 class="title">جمعية قاضي الحوائج</h1>
+    <div class="title">جمعية</div>
 </div>
 
 <div class="wave-container">
@@ -184,10 +192,13 @@
     </div>
 </div>
 
-<div class="contact-area">
-    <p> من يرغب بالانضمام إلى جمعية قاضي الحوائج أو المساهمة في أعمالها الاتصال عبر الرقم التالي:</p>
-    <a href="tel:0096171325197" class="phone-number">
-        +961 71 32 51 97
+<div class="contact-section">
+    <div class="contact-text">
+        من يرغب بالانضمام إلى <strong>جمعية قاضي الحوائج</strong> أو المساهمة في أعمالها، يسعدنا تواصلكم معنا عبر الرقم التالي:
+    </div>
+    <a href="tel:0096100000000" class="phone-link">
+        <span>📞</span>
+        <span dir="ltr">+961 00 000 000</span>
     </a>
 </div>
 
