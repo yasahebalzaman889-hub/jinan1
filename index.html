@@ -7,16 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* درجات الأسود الفاتح والرمادي الفحمي */
-            --bg-start: #2c2c2c;      /* أسود فاتح/رمادي داكن */
-            --bg-end: #484848;        /* رمادي متوسط */
-            --card-bg: rgba(255, 255, 255, 0.08); /* خلفية شفافة للأزرار */
-            --text-main: #ffffff;
-            --accent-border: #666666; /* حدود رمادية */
+            /* درجات الأزرق السحابي والرمادي الناعم */
+            --primary-blue: #455a64;   /* أزرق رمادي رزين */
+            --light-blue: #eceff1;     /* أبيض مائل للزرقة ناعم جداً */
+            --accent-blue: #607d8b;    /* لون تفاعلي */
+            --bg-gradient: linear-gradient(135deg, #f5f7f9 0%, #dae1e7 100%);
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -24,41 +23,51 @@
             font-family: 'Cairo', sans-serif;
             margin: 0;
             direction: rtl;
-            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
-            color: var(--text-main);
+            background: var(--bg-gradient);
+            color: var(--primary-blue);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* الهيدر */
         .header {
             width: 100%;
             max-width: 600px;
-            padding: 40px 20px 10px 20px;
+            padding: 50px 20px 20px 20px;
             text-align: center;
             box-sizing: border-box;
         }
 
         .logo {
-            height: 100px;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)) brightness(1.2);
+            height: 90px;
             margin-bottom: 15px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));
         }
 
         .title {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--primary-blue);
             margin: 0;
-            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
         }
 
-        /* حاوية الأزرار */
+        /* خط صغير تحت العنوان للزينة */
+        .title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-blue);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
         .menu-container {
             width: 100%;
-            max-width: 480px;
+            max-width: 450px;
             padding: 20px;
             box-sizing: border-box;
             flex: 1;
@@ -67,7 +76,7 @@
         .menu {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .menu a {
@@ -75,29 +84,29 @@
             justify-content: space-between;
             align-items: center;
             text-decoration: none;
-            background: var(--card-bg);
-            padding: 18px 25px;
-            border-radius: 15px; /* زوايا أقل حدة لمظهر عصري */
+            background: #ffffff;
+            padding: 16px 25px;
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
-            color: #ffffff;
-            border: 1px solid var(--accent-border);
-            backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.6s ease-out backwards;
+            color: var(--primary-blue);
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.5s ease-out backwards;
         }
 
         .menu a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: scale(1.02);
-            border-color: #ffffff;
+            transform: translateX(-5px); /* حركة جانبية بسيطة بدل الصعود */
+            background: var(--light-blue);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
         }
 
-        /* قسم الاتصال */
         .contact-section {
             width: 100%;
             max-width: 600px;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
             margin-top: auto;
         }
@@ -105,36 +114,33 @@
         .contact-text {
             font-size: 15px;
             margin-bottom: 20px;
-            opacity: 0.8;
-            font-weight: 400;
+            color: #78909c;
         }
 
-        /* زر الرقم */
-        .phone-circle {
+        .phone-button {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: #ffffff;
-            color: #2c2c2c;
+            gap: 10px;
+            background: var(--primary-blue);
+            color: white;
             padding: 12px 30px;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 19px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(69, 90, 100, 0.3);
             transition: all 0.3s ease;
             direction: ltr;
         }
 
-        .phone-circle:hover {
-            background: #e0e0e0;
-            transform: translateY(-3px);
+        .phone-button:hover {
+            background: #37474f;
+            box-shadow: 0 6px 20px rgba(69, 90, 100, 0.4);
+            transform: translateY(-2px);
         }
 
         @media (max-width: 600px) {
-            .menu-container { max-width: 92%; }
-            .logo { height: 80px; }
+            .menu-container { max-width: 90%; }
         }
     </style>
 </head>
@@ -149,29 +155,29 @@
     <div class="menu">
         <a href="introduction.html" style="animation-delay: 0.1s;">
             <span>المقدمة</span>
-            <span>←</span>
+            <span style="font-size: 20px;">+</span>
         </a>
         <a href="about.html" style="animation-delay: 0.2s;">
             <span>نبذة عن تأسيس الجمعية</span>
-            <span>←</span>
+            <span style="font-size: 20px;">+</span>
         </a>
         <a href="strategy.html" style="animation-delay: 0.3s;">
             <span>التوجه الاستراتيجي للجمعية</span>
-            <span>←</span>
+            <span style="font-size: 20px;">+</span>
         </a>
         <a href="goals.html" style="animation-delay: 0.4s;">
             <span>أهداف الجمعية</span>
-            <span>←</span>
+            <span style="font-size: 20px;">+</span>
         </a>
     </div>
 </div>
 
 <div class="contact-section">
     <div class="contact-text">
-        من يرغب بالانضمام أو المساهمة، الاتصال على الرقم:
+        للمساهمة أو الاستفسار، يسعدنا تواصلكم:
     </div>
     
-    <a href="tel:00961" class="phone-circle">
+    <a href="tel:00961" class="phone-button">
         <span>📞</span>
         <span>+961 </span>
     </a>
