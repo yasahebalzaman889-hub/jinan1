@@ -7,11 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* درجات اللون العسلي والذهبي الهادئ */
-            --primary-dark: #8d6e63;  /* بني عسلي غامق للنصوص */
-            --primary-light: #ffb74d; /* عسلي فاتح للحدود */
-            --bg-gradient: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); /* خلفية عسلية كريمية */
-            --accent-color: #fb8c00;  /* لون تأكيدي */
+            /* درجات الأسود الفاتح والرمادي الفحمي */
+            --bg-start: #2c2c2c;      /* أسود فاتح/رمادي داكن */
+            --bg-end: #484848;        /* رمادي متوسط */
+            --card-bg: rgba(255, 255, 255, 0.08); /* خلفية شفافة للأزرار */
+            --text-main: #ffffff;
+            --accent-border: #666666; /* حدود رمادية */
         }
 
         @keyframes fadeInUp {
@@ -23,8 +24,8 @@
             font-family: 'Cairo', sans-serif;
             margin: 0;
             direction: rtl;
-            background: var(--bg-gradient);
-            color: #4e342e; /* بني محروق للقراءة */
+            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+            color: var(--text-main);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -42,16 +43,16 @@
 
         .logo {
             height: 100px;
-            filter: drop-shadow(0 4px 8px rgba(141, 110, 99, 0.2));
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)) brightness(1.2);
             margin-bottom: 15px;
         }
 
         .title {
             font-size: 28px;
             font-weight: 700;
-            color: #6d4c41; 
+            color: #ffffff;
             margin: 0;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+            letter-spacing: 1px;
         }
 
         /* حاوية الأزرار */
@@ -74,70 +75,66 @@
             justify-content: space-between;
             align-items: center;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px 20px;
-            border-radius: 50px;
+            background: var(--card-bg);
+            padding: 18px 25px;
+            border-radius: 15px; /* زوايا أقل حدة لمظهر عصري */
             font-size: 16px;
             font-weight: 600;
-            color: #5d4037;
-            border: 2px solid var(--primary-light); 
-            box-shadow: 0 4px 15px rgba(210, 180, 140, 0.2);
+            color: #ffffff;
+            border: 1px solid var(--accent-border);
+            backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
             transition: all 0.3s ease;
             animation: fadeInUp 0.6s ease-out backwards;
         }
 
         .menu a:hover {
-            background: white;
-            transform: translateY(-3px);
-            border-color: var(--accent-color);
-            box-shadow: 0 6px 20px rgba(210, 180, 140, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.02);
+            border-color: #ffffff;
         }
 
-        /* قسم الاتصال المطور */
+        /* قسم الاتصال */
         .contact-section {
             width: 100%;
             max-width: 600px;
             padding: 30px 20px;
             text-align: center;
-            color: #5d4037;
             margin-top: auto;
         }
 
         .contact-text {
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 20px;
-            line-height: 1.6;
-            font-weight: 600;
+            opacity: 0.8;
+            font-weight: 400;
         }
 
-        /* تصميم الدائرة المحيطة بالرقم */
+        /* زر الرقم */
         .phone-circle {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            background: white;
-            color: #ef6c00;
-            padding: 12px 25px;
+            background: #ffffff;
+            color: #2c2c2c;
+            padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            font-size: 19px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             direction: ltr;
         }
 
         .phone-circle:hover {
-            transform: scale(1.05);
-            background: #ef6c00;
-            color: white;
+            background: #e0e0e0;
+            transform: translateY(-3px);
         }
 
         @media (max-width: 600px) {
-            .menu-container { max-width: 90%; }
-            .logo { height: 85px; }
-            .phone-circle { font-size: 18px; padding: 10px 20px; }
+            .menu-container { max-width: 92%; }
+            .logo { height: 80px; }
         }
     </style>
 </head>
@@ -171,7 +168,7 @@
 
 <div class="contact-section">
     <div class="contact-text">
-        من يرغب بالانضمام إلى <strong>جمعية قاضي الحوائج</strong> أو المساهمة في أعمالها، الاتصال على الرقم:
+        من يرغب بالانضمام أو المساهمة، الاتصال على الرقم:
     </div>
     
     <a href="tel:00961" class="phone-circle">
