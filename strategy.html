@@ -7,9 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-dark: #1b5e20; 
-            --primary-light: #4caf50;
-            --bg-gradient: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+            /* درجات الأخضر الحشيشي الموحدة */
+            --primary-dark: #2e7d32; 
+            --primary-light: #81c784;
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
         }
 
         @keyframes fadeInUp {
@@ -33,31 +35,33 @@
         .header {
             width: 100%;
             max-width: 600px;
-            padding: 30px 20px;
+            padding: 40px 20px 10px 20px;
             text-align: center;
         }
 
         .title-page {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            color: white;
+            color: var(--text-color);
             margin: 0;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
+            border-bottom: 3px solid var(--primary-light);
             display: inline-block;
             padding-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
         }
 
         /* حاوية المحتوى */
         .content-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.92);
             width: 90%;
             max-width: 700px;
-            margin: 10px 20px 30px 20px;
+            margin: 20px;
             padding: 35px 25px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             animation: fadeInUp 0.7s ease-out;
             box-sizing: border-box;
+            border: 1px solid white;
         }
 
         .intro-text {
@@ -68,7 +72,7 @@
             margin-bottom: 25px;
         }
 
-        /* تنسيق القائمة المرقمة */
+        /* تنسيق القائمة المرقمة الحديث */
         .strategy-list {
             list-style: none;
             padding: 0;
@@ -76,52 +80,55 @@
         }
 
         .strategy-item {
-            background: #f1f8e9;
+            background: white;
             margin-bottom: 12px;
             padding: 15px 18px;
-            border-radius: 12px;
+            border-radius: 15px;
             display: flex;
             align-items: flex-start;
             gap: 12px;
-            border-right: 4px solid var(--primary-light);
-            transition: transform 0.2s ease;
+            border-right: 5px solid var(--primary-light);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
 
         .strategy-item:hover {
             transform: scale(1.02);
-            background: #e8f5e9;
+            background: #f1f8e9;
+            border-right-color: var(--primary-dark);
         }
 
         .number-box {
             background: var(--primary-dark);
             color: white;
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
             flex-shrink: 0;
-            font-size: 14px;
+            font-size: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
 
         .item-text {
             font-size: 16px;
             font-weight: 600;
-            color: #333;
-            line-height: 1.5;
+            color: #2c3e50;
+            line-height: 1.6;
         }
 
         .conclusion-text {
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 17px;
             line-height: 1.8;
             color: var(--primary-dark);
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid #eee;
+            border-top: 2px dashed var(--primary-light);
         }
 
         /* زر العودة */
@@ -129,26 +136,28 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
+            background: white;
+            color: var(--primary-dark);
             text-decoration: none;
-            padding: 10px 25px;
+            padding: 12px 30px;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s ease;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .back-btn:hover {
-            background: white;
-            color: var(--primary-dark);
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
         }
 
         @media (max-width: 600px) {
             .content-card { padding: 25px 15px; }
-            .intro-text { font-size: 15.5px; }
-            .item-text { font-size: 14.5px; }
+            .intro-text { font-size: 16px; }
+            .item-text { font-size: 15px; }
+            .title-page { font-size: 22px; }
         }
     </style>
 </head>
