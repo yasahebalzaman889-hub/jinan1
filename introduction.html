@@ -7,9 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-dark: #1b5e20; 
-            --primary-light: #4caf50;
-            --bg-gradient: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+            /* نفس درجات الألوان التي اخترتها */
+            --primary-dark: #2e7d32; 
+            --primary-light: #81c784;
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
         }
 
         @keyframes fadeInUp {
@@ -33,31 +35,33 @@
         .header {
             width: 100%;
             max-width: 600px;
-            padding: 30px 20px;
+            padding: 40px 20px 10px 20px;
             text-align: center;
         }
 
         .title-page {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            color: white;
+            color: var(--text-color);
             margin: 0;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
+            border-bottom: 3px solid var(--primary-light);
             display: inline-block;
             padding-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
         }
 
         /* حاوية النص */
         .content-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             width: 90%;
             max-width: 650px;
-            margin: 10px 20px 30px 20px;
-            padding: 30px 25px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 20px;
+            padding: 35px 25px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             animation: fadeInUp 0.7s ease-out;
             box-sizing: border-box;
+            border: 1px solid white;
         }
 
         .quran-section {
@@ -76,7 +80,7 @@
         .ayah {
             font-size: 19px;
             font-weight: 600;
-            color: #444;
+            color: #333;
             line-height: 1.8;
             margin: 15px 0;
             display: block;
@@ -92,16 +96,17 @@
         }
 
         .divider {
-            height: 1px;
-            background: linear-gradient(to left, transparent, #4caf50, transparent);
+            height: 2px;
+            background: linear-gradient(to left, transparent, var(--primary-light), transparent);
             margin: 25px 0;
         }
 
         .main-text {
             font-size: 17px;
-            line-height: 1.9;
-            color: #333;
+            line-height: 2;
+            color: #2c3e50;
             text-align: justify;
+            font-weight: 400;
         }
 
         /* زر العودة */
@@ -109,26 +114,27 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
+            background: white;
+            color: var(--primary-dark);
             text-decoration: none;
-            padding: 10px 25px;
+            padding: 12px 30px;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s ease;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .back-btn:hover {
-            background: white;
-            color: var(--primary-dark);
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
         }
 
         @media (max-width: 600px) {
             .ayah { font-size: 17px; }
-            .main-text { font-size: 16px; }
-            .content-card { padding: 20px 15px; }
+            .main-text { font-size: 16px; text-align: center; }
+            .content-card { padding: 25px 15px; }
         }
     </style>
 </head>
@@ -142,7 +148,7 @@
     <div class="quran-section">
         <span class="basmalah">بسم الله الرحمن الرحيم</span>
         
-        <span class="ayah">"وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ"</span>
+        <span class="ayah">"وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ"</span>
         
         <span class="ayah">"وَمَا تُنفِقُوا مِنْ خَيْرٍ فَلِأَنفُسِكُمْ"</span>
         
