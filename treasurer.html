@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمين الصندوق والمراقب المالي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #81c784;
+            --gold-accent: #ffd700;
+            --bg-gradient: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: translateX(5px); }
+
+        .header-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-title h1 {
+            color: var(--primary-dark);
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .header-title span {
+            background: var(--primary-med);
+            color: white;
+            padding: 4px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* تقسيم المهام إلى مجموعات */
+        .finance-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .finance-group {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            padding: 20px;
+            border-top: 5px solid var(--primary-med);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .group-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            background: white;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .task-item:hover {
+            border-color: var(--primary-light);
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .bullet {
+            color: var(--primary-med);
+            font-size: 18px;
+        }
+
+        .summary-box {
+            margin-top: 30px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .finance-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-title">
+            <h1>أمين الصندوق والمراقب المالي</h1>
+            <span>الأمانة، الدقة، والنزاهة المالية</span>
+        </div>
+
+        <div class="finance-section">
+            
+            <div class="finance-group">
+                <div class="group-title">💰 إدارة الصندوق والسيولة</div>
+                <div class="task-list">
+                    <div class="task-item"><span class="bullet">●</span> استلام الأموال من المندوبين وإصدار الفواتير.</div>
+                    <div class="task-item"><span class="bullet">●</span> جرد الصندوق دورياً بناءً على النظام المعتمد.</div>
+                    <div class="task-item"><span class="bullet">●</span> صرف الأموال بموجب قرارات رسمية وفواتير صحيحة.</div>
+                    <div class="task-item"><span class="bullet">●</span> صرف القروض للمشتركين وفق الطلبات المرفوعة.</div>
+                    <div class="task-item"><span class="bullet">●</span> إرسال الأموال للأمانات بموافقة رئيس الجمعية.</div>
+                    <div class="task-item"><span class="bullet">●</span> إعداد كشوف الرواتب والمستحقات للموظفين.</div>
+                </div>
+            </div>
+
+            <div class="finance-group">
+                <div class="group-title">🔍 الرقابة والتدقيق المالي</div>
+                <div class="task-list">
+                    <div class="task-item"><span class="bullet">●</span> فحص الإيرادات والمصروفات والمستندات الداعمة.</div>
+                    <div class="task-item"><span class="bullet">●</span> مراجعة وتدقيق السجلات المالية والتأكد من دقتها.</div>
+                    <div class="task-item"><span class="bullet">●</span> الكشف عن أي أخطاء أو مخالفات مالية فوراً.</div>
+                    <div class="task-item"><span class="bullet">●</span> تقييم أنظمة الرقابة واقتراح تحسينات دورية.</div>
+                    <div class="task-item"><span class="bullet">●</span> الالتزام التام بالميزانية المعتمدة والسياسات.</div>
+                    <div class="task-item"><span class="bullet">●</span> مراجعة التقارير المالية قبل اعتمادها النهائي.</div>
+                </div>
+            </div>
+
+            <div class="finance-group">
+                <div class="group-title">📋 التخطيط والإدارة المالية</div>
+                <div class="task-list">
+                    <div class="task-item"><span class="bullet">●</span> المشاركة في إعداد الموازنة والتقارير السنوية.</div>
+                    <div class="task-item"><span class="bullet">●</span> حفظ السجلات المالية بشكل منظم، آمن وسري.</div>
+                    <div class="task-item"><span class="bullet">●</span> الرد على كافة الاستفسارات المالية للمشتركين.</div>
+                    <div class="task-item"><span class="bullet">●</span> التعاون الوثيق مع الرئيس والمحاسب لضمان العمل.</div>
+                    <div class="task-item"><span class="bullet">●</span> المشاركة في التصويت واتخاذ القرارات الإدارية.</div>
+                    <div class="task-item"><span class="bullet">●</span> الالتزام التام بسرية المعلومات والأموال الموكلة.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+            المشاركة الدائمة في الجلسات والتنسيق المباشر والمستمر مع الإدارة في كل ما يخص الملف المالي
+        </div>
+    </div>
+
+</body>
+</html>
