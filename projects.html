@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسؤول المشاريع - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #81c784;
+            --blue-accent: #1976d2;
+            --bg: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: translateX(5px); }
+
+        .header-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-title h1 {
+            color: var(--primary-dark);
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .header-title .tagline {
+            display: inline-block;
+            background: var(--blue-accent);
+            color: white;
+            padding: 4px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* تقسيم المهام إلى مراحل المشروع */
+        .project-phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .phase-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border-right: 6px solid var(--primary-med);
+            transition: 0.3s;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .phase-card h3 {
+            color: var(--primary-dark);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 19px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 10px 0;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.6;
+            border-bottom: 1px dashed #f0f0f0;
+        }
+
+        .task-item:last-child { border-bottom: none; }
+
+        .bullet {
+            color: var(--primary-light);
+            font-size: 18px;
+        }
+
+        .footer-coordination {
+            margin-top: 40px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .footer-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .project-phases { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-title">
+            <h1>مسؤول المشاريع</h1>
+            <div class="tagline">تخطيط استراتيجي وتنفيذ احترافي لخدمة المجتمع</div>
+        </div>
+
+        <div class="project-phases">
+            
+            <div class="phase-card">
+                <h3>📝 التخطيط والتأسيس</h3>
+                <div class="task-list">
+                    <div class="task-item">تحديد الاحتياجات التنموية بالتنسيق مع الإدارة.</div>
+                    <div class="task-item">إعداد مقترحات المشاريع (النوع، الهدف، الميزانية، الجدول).</div>
+                    <div class="task-item">وضع مؤشرات قياس الأداء (KPIs) لضمان النجاح.</div>
+                    <div class="task-item">إعداد خطة عمل تفصيلية وجدول زمني لكل مشروع.</div>
+                    <div class="task-item">اقتراح مشاريع جديدة تتوافق مع رؤية الجمعية.</div>
+                </div>
+            </div>
+
+            <div class="phase-card" style="border-right-color: var(--blue-accent);">
+                <h3>🚀 التنفيذ والإدارة</h3>
+                <div class="task-list">
+                    <div class="task-item">الإشراف المباشر على تنفيذ الأنشطة وفق الخطة.</div>
+                    <div class="task-item">توزيع المهام بفعالية على فريق العمل والمتطوعين.</div>
+                    <div class="task-item">إدارة الميزانية وضبط المصروفات حسب اللوائح المالية.</div>
+                    <div class="task-item">التنسيق مع الشركاء والجهات الداعمة للمشاريع.</div>
+                    <div class="task-item">حل المشكلات والتحديات الطارئة أثناء التنفيذ الميداني.</div>
+                    <div class="task-item">تمثيل الجمعية في الاجتماعات الرسمية المتعلقة بالمشاريع.</div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <h3>📊 المتابعة والتطوير</h3>
+                <div class="task-list">
+                    <div class="task-item">متابعة سير العمل وقياس نسبة الإنجاز الفعلية.</div>
+                    <div class="task-item">إعداد تقارير دورية شاملة ترفع للإدارة.</div>
+                    <div class="task-item">تقييم أثر المشروع على المستفيدين بشكل حقيقي.</div>
+                    <div class="task-item">توثيق الإنجازات وتطوير آليات العمل والتحسين المستمر.</div>
+                    <div class="task-item">إجراء التقييم السنوي الشامل لملف المشاريع.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-coordination">
+            <strong>التنسيق والتواصل الإداري</strong>
+            <div class="footer-grid">
+                <div class="footer-tag">🤝 التنسيق الدائم مع الرئيس</div>
+                <div class="footer-tag">🏛️ المشاركة الفعالة في الجلسات</div>
+                <div class="footer-tag">💬 نقاشات دورية مع الإدارة</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
