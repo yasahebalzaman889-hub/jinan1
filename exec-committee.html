@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللجنة التنفيذية - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;
+            --primary-light: #81c784;
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-green: #e8f5e9;
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .header-section h1 {
+            color: var(--text-color);
+            font-size: 30px;
+            margin: 0;
+            text-shadow: 1px 1px 0px white;
+        }
+
+        .info-tag {
+            display: inline-block;
+            background: var(--primary-dark);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .exec-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .exec-item {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 18px 25px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-left: 5px solid var(--primary-light);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            animation: fadeInRight 0.5s ease-out backwards;
+            transition: 0.3s;
+        }
+
+        .exec-item:hover {
+            background: white;
+            transform: translateX(-10px);
+            border-left-color: var(--primary-dark);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .exec-num {
+            background: var(--accent-green);
+            color: var(--primary-dark);
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .exec-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .exec-item { padding: 15px; gap: 12px; }
+            .header-section h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-section">
+            <h1>مهام ووظائف اللجنة التنفيذية</h1>
+            <div class="info-tag">المسؤوليات التشغيلية والميدانية</div>
+        </div>
+
+        <div class="exec-list">
+            <div class="exec-item" style="animation-delay: 0.1s;">
+                <div class="exec-num">١</div>
+                <div class="exec-text">تنفيذ وتطبيق كافة قرارات وتوصيات الجمعية بدقة.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.2s;">
+                <div class="exec-num">٢</div>
+                <div class="exec-text">متابعة تنفيذ الخطط والبرامج المعتمدة على أرض الواقع.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.3s;">
+                <div class="exec-num">٣</div>
+                <div class="exec-text">الإشراف المباشر على سير العمل اليومي للجمعية.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.4s;">
+                <div class="exec-num">٤</div>
+                <div class="exec-text">
+                    متابعة أداء الموظفين واللجان والمشتركين.
+                    <span class="note">رفع النتائج والتقارير إلى اللجنة التنظيمية.</span>
+                </div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.5s;">
+                <div class="exec-num">٥</div>
+                <div class="exec-text">ضمان التزام المشتركين باللوائح الداخلية والأنظمة المعمول بها.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.6s;">
+                <div class="exec-num">٦</div>
+                <div class="exec-text">إعداد الخطط التشغيلية الفصلية والسنوية <span style="color:var(--primary-dark)">(كلاً بحسب مهمته)</span>.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.7s;">
+                <div class="exec-num">٧</div>
+                <div class="exec-text">اقتراح مشاريع وبرامج جديدة تساهم في تحقيق رؤية الجمعية.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.8s;">
+                <div class="exec-num">٨</div>
+                <div class="exec-text">تقييم الأداء الدوري ورفع التقارير المفصلة للجهات المعنية.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 0.9s;">
+                <div class="exec-num">٩</div>
+                <div class="exec-text">
+                    تمثيل الجمعية أمام الجهات الرسمية.
+                    <span class="note">يتم ذلك بتفويض رسمي من رئيس الجمعية.</span>
+                </div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 1.0s;">
+                <div class="exec-num">١٠</div>
+                <div class="exec-text">الدعوة لعقد اجتماعات الجمعية العمومية عند الضرورة والحاجة.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 1.1s;">
+                <div class="exec-num">١١</div>
+                <div class="exec-text">إعداد جداول الأعمال الخاصة بالملفات الموكلة لكل عضو.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 1.2s;">
+                <div class="exec-num">١٢</div>
+                <div class="exec-text">المشاركة الفعالة في الجلسات التي تقيمها الجمعية عند الضرورة.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 1.3s;">
+                <div class="exec-num">١٣</div>
+                <div class="exec-text">التنسيق الدائم مع اللجنة التنظيمية في كل ما يخص المهام التنفيذية.</div>
+            </div>
+
+            <div class="exec-item" style="animation-delay: 1.4s;">
+                <div class="exec-num">١٤</div>
+                <div class="exec-text">مناقشة الملفات (مباشرة أو غير مباشرة) مع اللجنة التنظيمية لضمان التكامل.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
