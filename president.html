@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهام وصلاحيات الرئيس - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #81c784;
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .main-title {
+            text-align: center;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+        }
+
+        .main-title h1 { font-size: 28px; margin-bottom: 5px; }
+        .main-title p { font-weight: 600; opacity: 0.8; }
+
+        /* تقسيم الأقسام */
+        .category-section {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px;
+            padding: 25px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid white;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 10px;
+        }
+
+        .category-header span.icon {
+            font-size: 24px;
+            background: var(--white);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .category-header h2 { font-size: 20px; margin: 0; }
+
+        /* أسطر المهام */
+        .task-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .task-item {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            gap: 12px;
+            transition: 0.3s;
+            border-right: 4px solid var(--primary-light);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .task-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-right-color: var(--primary-dark);
+        }
+
+        .task-num {
+            color: var(--primary-med);
+            font-weight: 700;
+            font-size: 14px;
+            min-width: 25px;
+        }
+
+        .task-text {
+            font-size: 14.5px;
+            line-height: 1.5;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* تمييز خاص للصلاحيات */
+        .authority-item {
+            border-right-color: #ffb300; /* لون ذهبي للصلاحيات */
+        }
+
+        @media (max-width: 768px) {
+            .task-grid { grid-template-columns: 1fr; }
+            .main-title h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="main-title">
+            <h1>مهام ووظائف وصلاحيات الرئيس</h1>
+            <p>القيادة، الإدارة، والرؤية الإستراتيجية</p>
+        </div>
+
+        <div class="category-section">
+            <div class="category-header">
+                <span class="icon">🚀</span>
+                <h2>القيادة والرؤية الإستراتيجية</h2>
+            </div>
+            <div class="task-grid">
+                <div class="task-item"><span class="task-num">٠١</span><span class="task-text">توفير الرؤية والإستراتيجية لتحقيق أهداف الجمعية وضمان تنفيذ الخطط بنجاح.</span></div>
+                <div class="task-item"><span class="task-num">٠٥</span><span class="task-text">المشاركة في اتخاذ القرارات الإستراتيجية بالتعاون مع أعضاء المجلس.</span></div>
+                <div class="task-item"><span class="task-num">٠٩</span><span class="task-text">الحفاظ على معنويات فريق العمل والمتطوعين وتوفير بيئة عمل محفزة.</span></div>
+                <div class="task-item"><span class="task-num">١١</span><span class="task-text">قيادة الجمعية في الأوقات الصعبة أو خلال الأزمات واتخاذ القرارات المناسبة.</span></div>
+                <div class="task-item"><span class="task-num">١٥</span><span class="task-text">ضبط الجمعية والمحافظة عليها من التفكك وضمان ترابطها.</span></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <div class="category-header">
+                <span class="icon">📝</span>
+                <h2>الإدارة والتنظيم الإداري</h2>
+            </div>
+            <div class="task-grid">
+                <div class="task-item"><span class="task-num">٠٢</span><span class="task-text">رئاسة الاجتماعات العامة واللجان وضمان سيرها وفقاً للوائح والقوانين.</span></div>
+                <div class="task-item"><span class="task-num">٠٣</span><span class="task-text">تمثيل الجمعية أمام الجهات الرسمية والحكومية والمنظمات الأخرى.</span></div>
+                <div class="task-item"><span class="task-num">١٣</span><span class="task-text">إدارة وتنظيم أمور الجمعية بشكل كامل وشمولي.</span></div>
+                <div class="task-item"><span class="task-num">١٨</span><span class="task-text">مراجعة وتوقيع كل الأوراق والمستندات والوصولات والمعاملات الرسمية.</span></div>
+                <div class="task-item"><span class="task-num">١٠</span><span class="task-text">توفير فرص التدريب والتطوير المهني للأعضاء لضمان استمرارية النمو.</span></div>
+                <div class="task-item"><span class="task-num">١٦</span><span class="task-text">إقامة جلسات دورية للمشتركين واللجان لمتابعة المستجدات.</span></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <div class="category-header">
+                <span class="icon">🛡️</span>
+                <h2>الرقابة، المالية والخصوصية</h2>
+            </div>
+            <div class="task-grid">
+                <div class="task-item"><span class="task-num">٠٤</span><span class="task-text">مراقبة أداء الجمعية وفرق العمل وضمان الالتزام باللوائح الداخلية والخارجية.</span></div>
+                <div class="task-item"><span class="task-num">٠٦</span><span class="task-text">ضمان الاستخدام الأمثل للموارد المالية والإشراف على الميزانيات والإنفاق.</span></div>
+                <div class="task-item"><span class="task-num">١٢</span><span class="task-text">مواكبة كل ملفات اللجنة الإدارية والاطلاع الدائم على سير عملهم.</span></div>
+                <div class="task-item"><span class="task-num">١٧</span><span class="task-text">المحافظة المشددة على أسرار الجمعية وخصوصية المشتركين.</span></div>
+                <div class="task-item"><span class="task-num">١٩</span><span class="task-text">التأكد من صحة الاشتراكات الشهرية وإجراء التواقيع اللازمة وإرسالها.</span></div>
+                <div class="task-item"><span class="task-num">٢١</span><span class="task-text">إجراء تقييم فصلي وسنوي للأعمال المنجزة وتحديد نسب النجاح لكل مسؤول.</span></div>
+            </div>
+        </div>
+
+        <div class="category-section" style="border-right: 8px solid #ffb300;">
+            <div class="category-header">
+                <span class="icon">⚖️</span>
+                <h2 style="color: #bf360c;">الصلاحيات والحقوق الرسمية</h2>
+            </div>
+            <div class="task-grid">
+                <div class="task-item authority-item"><span class="task-num">٢٣</span><span class="task-text">يحق للرئيس التواصل المباشر مع جميع المشتركين في أمور الجمعية.</span></div>
+                <div class="task-item authority-item"><span class="task-num">٢٤</span><span class="task-text">اتخاذ أي إجراء يراه مناسباً في مجال قضاء حوائج المشتركين ضمن النظام.</span></div>
+                <div class="task-item authority-item"><span class="task-num">٢٥</span><span class="task-text">تغيير هيكلية المجلس الإداري أو أعضائه أو تأسيس ملفات جديدة عند الضرورة.</span></div>
+                <div class="task-item authority-item"><span class="task-num">٢٧</span><span class="task-text">تغيير وتطوير النظام بناءً على تطور الجمعية بالتعاون مع اللجنة.</span></div>
+                <div class="task-item authority-item"><span class="task-num">٢٩</span><span class="task-text">إخراج أي فرد من الجلسة في حال الخروج عن اللياقات والضوابط الأخلاقية.</span></div>
+                <div class="task-item authority-item"><span class="task-num">٣٠</span><span class="task-text">إلغاء أي فكرة أو طرح يراه غير مناسب أو غير منطقي أو غير قانوني.</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
