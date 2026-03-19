@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المندوب المالي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #c8e6c9;
+            --accent-gold: #ffd700;
+            --bg-body: #f0f4f0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background-color: var(--bg-body);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-card {
+            background: var(--primary-dark);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-card h1 { margin: 0; font-size: 28px; }
+        .header-card p { opacity: 0.9; margin-top: 10px; font-weight: 400; }
+
+        .delegate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .task-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--primary-med);
+            transition: 0.3s;
+        }
+
+        .task-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+
+        .card-title {
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-list { list-style: none; padding: 0; margin: 0; }
+
+        .task-item {
+            font-size: 14.5px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            line-height: 1.5;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .task-item::before { content: '✔'; color: var(--primary-med); font-weight: bold; }
+
+        /* صندوق الصفات الشخصية */
+        .integrity-box {
+            background: white;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px dashed var(--primary-med);
+            text-align: center;
+        }
+
+        .integrity-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .trait {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .footer-admin {
+            margin-top: 30px;
+            background: #e1ede1;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary-dark);
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .header-card h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-card">
+            <h1>المندوب المالي</h1>
+            <p>حلقة الوصل الميدانية والأمين على اشتراكات ومساهمات المشتركين</p>
+        </div>
+
+        <div class="delegate-grid">
+            
+            <div class="task-card">
+                <div class="card-title">💵 التحصيل والدورة المالية</div>
+                <div class="task-list">
+                    <div class="task-item">استلام الكشف المالي الشهري من الإدارة ومراجعته بدقة.</div>
+                    <div class="task-item">تحصيل المستحقات (اشتراك/تبرع/تسديد) ضمن المواعيد.</div>
+                    <div class="task-item">إصدار وصولات استلام رسمية وقانونية لكل عملية.</div>
+                    <div class="task-item">تسليم الأموال والكشوف والوصولات للإدارة في الموعد المحدد.</div>
+                </div>
+            </div>
+
+            <div class="task-card">
+                <div class="card-title">👥 شؤون المشتركين</div>
+                <div class="task-list">
+                    <div class="task-item">متابعة كافة أمور المشتركين (معاملات، مستندات) بشكل كامل.</div>
+                    <div class="task-item">السعي الدائم لتنسيب مشتركين جدد لأسرة الجمعية.</div>
+                    <div class="task-item">الرد على استفسارات المشتركين ونقل ملاحظاتهم للإدارة.</div>
+                    <div class="task-item">تطوير آلية العمل الميداني وتحسين أداء التحصيل.</div>
+                </div>
+            </div>
+
+            <div class="task-card">
+                <div class="card-title">📊 المحاسبة والتوثيق</div>
+                <div class="task-list">
+                    <div class="task-item">تسجيل كافة العمليات المالية الخاصة به في سجلات المحاسبة.</div>
+                    <div class="task-item">إعداد التقارير المالية الدورية والسنوية عن منطقته/قطاعه.</div>
+                    <div class="task-item">إجراء تقييم سنوي للأداء وتحديد نقاط القوة والضعف.</div>
+                    <div class="task-item">احترام القانون الأساسي والالتزام بالأنظمة الداخلية.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="integrity-box">
+            <strong>ميثاق المندوب المالي</strong>
+            <div class="integrity-items">
+                <span class="trait">✨ الأمانة</span>
+                <span class="trait">💎 النزاهة</span>
+                <span class="trait">🎯 الدقة</span>
+                <span class="trait">📅 التنظيم</span>
+                <span class="trait">🤝 الحياد</span>
+            </div>
+        </div>
+
+        <div class="footer-admin">
+            تنسيق مباشر مع الرئيس • مشاركة فاعلة في الجلسات • نقاش مستمر مع الإدارة المالية
+        </div>
+    </div>
+
+</body>
+</html>
