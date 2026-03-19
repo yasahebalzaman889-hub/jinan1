@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللجنة التنظيمية - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;
+            --primary-light: #81c784;
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --card-bg: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateX(5px);
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .header-box {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .header-box h1 {
+            color: var(--text-color);
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header-box p {
+            color: #444;
+            font-weight: 600;
+            background: rgba(255,255,255,0.4);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 20px;
+        }
+
+        /* شبكة المهام */
+        .tasks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            perspective: 1000px;
+        }
+
+        .task-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--primary-light);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            animation: slideInUp 0.8s ease-out backwards;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--primary-dark);
+            background: white;
+        }
+
+        .task-icon {
+            background: var(--primary-light);
+            color: white;
+            min-width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .task-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            .tasks-grid { grid-template-columns: 1fr; }
+            .header-box h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-box">
+            <h1>مهام ووظائف اللجنة التنظيمية</h1>
+            <p>الجوانب التنظيمية والإشرافية العامة</p>
+        </div>
+
+        <div class="tasks-grid">
+            <div class="task-card" style="animation-delay: 0.1s;">
+                <div class="task-icon">1</div>
+                <div class="task-text">وضع <span class="highlight">السياسات العامة</span> والخطط الداخلية (مع مشاركة اللجنة التنفيذية في الأمور الإستراتيجية).</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.15s;">
+                <div class="task-icon">2</div>
+                <div class="task-text">الإشراف المباشر على سير <span class="highlight">العمل الإداري</span> داخل الجمعية.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.2s;">
+                <div class="task-icon">3</div>
+                <div class="task-text">اعتماد اللوائح الداخلية والأنظمة التنظيمية التي تحكم العمل.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.25s;">
+                <div class="task-icon">4</div>
+                <div class="task-text">متابعة الأداء العام والتأكد من <span class="highlight">الالتزام الكامل</span> بالقوانين.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.3s;">
+                <div class="task-icon">5</div>
+                <div class="task-text">إقرار الميزانيات السنوية والتقارير التنظيمية المطلوبة.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.35s;">
+                <div class="task-icon">6</div>
+                <div class="task-text">تعيين أو اقتراح تعيين أعضاء اللجان التنفيذية.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.4s;">
+                <div class="task-icon">7</div>
+                <div class="task-text"><span class="highlight">اتخاذ القرارات الكبرى</span> التي ترسم مسار الجمعية.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.45s;">
+                <div class="task-icon">8</div>
+                <div class="task-text">تفعيل الدور التوجيهي والرقابي لضمان الشفافية.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.5s;">
+                <div class="task-icon">9</div>
+                <div class="task-text">متابعة المهام الإدارية بحسب تخصص كل عضو في اللجنة.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.55s;">
+                <div class="task-icon">10</div>
+                <div class="task-text">المشاركة الفعالة في الجلسات المرتبطة باللجنة التنظيمية.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.6s;">
+                <div class="task-icon">11</div>
+                <div class="task-text">تنظيم شؤون الجمعية وهيكليتها بشكل عام.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.65s;">
+                <div class="task-icon">12</div>
+                <div class="task-text">التنسيق المستمر مع اللجنة التنفيذية لمتابعة الأعمال المطلوبة.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.7s;">
+                <div class="task-icon">13</div>
+                <div class="task-text">تحديد قائمة الحضور المطلوبة لأي جلسة رسمية.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.75s;">
+                <div class="task-icon">14</div>
+                <div class="task-text">تحليل الوضع الحالي للجمعية وقياس مدى التقدم.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.8s;">
+                <div class="task-icon">15</div>
+                <div class="task-text">إجراء دراسات دقيقة حول احتياجات المستفيدين.</div>
+            </div>
+
+            <div class="task-card" style="animation-delay: 0.85s;">
+                <div class="task-icon">16</div>
+                <div class="task-text">تحديد أولويات واضحة وإعداد خطط زمنية للتنفيذ.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
