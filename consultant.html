@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستشار - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --gold: #b8860b;
+            --bg-light: #fdfdfd;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: #f4f7f4;
+            color: var(--text-color);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .header-section h1 { color: var(--primary-dark); margin: 0; font-size: 32px; }
+        
+        .role-notice {
+            background: #fff9e6;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #856404;
+        }
+
+        .advisor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .advisor-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-right: 4px solid var(--primary-dark);
+            transition: 0.3s;
+        }
+
+        .advisor-card:hover { transform: translateY(-5px); }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-list { list-style: none; padding: 0; margin: 0; }
+
+        .task-item {
+            font-size: 14.5px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .task-item::before { content: '◈'; color: var(--gold); }
+
+        .footer-note {
+            margin-top: 30px;
+            text-align: center;
+            background: var(--primary-dark);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-section">
+            <h1>المستشار العام</h1>
+            <div class="role-notice">
+                ⚠️ <strong>تنبيه إداري:</strong> المستشار دوره استشاري وتوجيهي وليس إدارياً مباشراً، ولا يملك صلاحيات تنفيذية إلا بنص صريح في النظام الأساسي.
+            </div>
+        </div>
+
+        <div class="advisor-grid">
+            
+            <div class="advisor-card">
+                <div class="card-title">⚖️ الرأي القانوني والتنظيمي</div>
+                <div class="task-list">
+                    <div class="task-item">تقديم الرأي القانوني حول قرارات مجلس الإدارة.</div>
+                    <div class="task-item">مراجعة اللوائح الداخلية والعقود والاتفاقيات.</div>
+                    <div class="task-item">التأكد من التزام الجمعية بالأنظمة والقوانين المحلية.</div>
+                    <div class="task-item">المساهمة في حل النزاعات الداخلية بأسلوب مهني.</div>
+                </div>
+            </div>
+
+            <div class="advisor-card" style="border-right-color: var(--gold);">
+                <div class="card-title">📈 التطوير والاستراتيجية</div>
+                <div class="task-list">
+                    <div class="task-item">تقديم توصيات لتحسين الأداء الإداري والتنظيمي.</div>
+                    <div class="task-item">المشاركة في وضع الخطط الاستراتيجية طويلة المدى.</div>
+                    <div class="task-item">اقتراح مبادرات تطويرية ومشاريع جديدة للجمعية.</div>
+                    <div class="task-item">تقييم المخاطر المحتملة وتقديم الحلول المناسبة.</div>
+                </div>
+            </div>
+
+            <div class="advisor-card">
+                <div class="card-title">🔍 التقييم والتمثيل</div>
+                <div class="task-list">
+                    <div class="task-item">مراجعة الأداء العام وتقديم تقارير استشارية دورية.</div>
+                    <div class="task-item">تقييم نتائج البرامج والمشاريع وقياس فاعليتها.</div>
+                    <div class="task-item">حضور الاجتماعات عند الحاجة لإبداء الرأي الفني.</div>
+                    <div class="task-item">تمثيل الجمعية في الفعاليات الرسمية عند التكليف.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-note">
+            المناقشة المستمرة مع الإدارة لضمان سير العمل وفق أعلى المعايير القانونية والفنية
+        </div>
+    </div>
+
+</body>
+</html>
