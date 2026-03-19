@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسؤول الثقافة والإصلاح - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-sage: #558b2f;
+            --primary-dark: #2e7d32;
+            --soft-cream: #f9fbe7;
+            --text-main: #33691e;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: translateX(5px); }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--text-main);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-weight: 600;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* تنسيق المحاور الثقافية */
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .culture-card {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(85, 139, 47, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--primary-sage);
+            transition: 0.4s;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(85, 139, 47, 0.2);
+        }
+
+        .culture-card::before {
+            content: '🌿';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 50px;
+            opacity: 0.1;
+        }
+
+        .card-title {
+            color: var(--primary-dark);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            padding: 8px 0;
+            font-size: 15px;
+            font-weight: 600;
+            color: #444;
+            display: flex;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .task-item span { color: var(--primary-sage); }
+
+        .management-strip {
+            margin-top: 40px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .management-strip { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header">
+            <h1>مسؤول الثقافة والإصلاح</h1>
+            <p>المساهمة في بناء الفرد وتطوير المجتمع وترسيخ القيم الأخلاقية السامية</p>
+        </div>
+
+        <div class="culture-grid">
+            
+            <div class="culture-card">
+                <div class="card-title">📖 نشر الوعي والقيم</div>
+                <div class="task-list">
+                    <div class="task-item"><span>•</span> نشر الوعي الديني، الاجتماعي، والتربوي.</div>
+                    <div class="task-item"><span>•</span> الحفاظ على الهوية وترسيخ المبادئ الأخلاقية.</div>
+                    <div class="task-item"><span>•</span> الدعوة للقيم الإيجابية كالعدل والتعاون.</div>
+                    <div class="task-item"><span>•</span> مكافحة الجهل، العنف، والانحراف السلوكي.</div>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <div class="card-title">🧠 تنمية الفكر والمعرفة</div>
+                <div class="task-list">
+                    <div class="task-item"><span>•</span> إقامة الندوات، الدورات، والمحاضرات الثقافية.</div>
+                    <div class="task-item"><span>•</span> تقديم دروس ثقافية ومحاضرات توجيهية.</div>
+                    <div class="task-item"><span>•</span> إعداد المسابقات والمباريات الثقافية المتنوعة.</div>
+                    <div class="task-item"><span>•</span> بناء شخصيات متوازنة لدى الأعضاء والمستفيدين.</div>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <div class="card-title">🤝 الإصلاح والتنمية</div>
+                <div class="task-list">
+                    <div class="task-item"><span>•</span> إصلاح ذات البين وحل النزاعات بين الأفراد.</div>
+                    <div class="task-item"><span>•</span> تقديم التوجيه والإرشاد الأسري والشبابي.</div>
+                    <div class="task-item"><span>•</span> تنظيم ورش عمل تخدم التنمية الاجتماعية.</div>
+                    <div class="task-item"><span>•</span> التحدث باسم الجمعية عند التكليف الرسمي.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="management-strip">
+            <div>📍 تنسيق دائم مع الرئيس</div>
+            <div>🗓️ مشاركة فاعلة في الجلسات</div>
+            <div>💬 نقاش مستمر مع الإدارة</div>
+        </div>
+    </div>
+
+</body>
+</html>
