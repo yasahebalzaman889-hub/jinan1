@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسؤول الإعلامي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #81c784;
+            --media-blue: #0277bd;
+            --bg-gradient: linear-gradient(135deg, #f1f8e9 0%, #a5d6a7 100%);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: translateX(5px); }
+
+        .header-box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-box h1 {
+            color: var(--primary-dark);
+            font-size: 32px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .header-box p {
+            background: var(--white);
+            display: inline-block;
+            padding: 5px 25px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-med);
+            margin-top: 10px;
+        }
+
+        /* تنسيق الأقسام الإعلامية */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .media-category {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--primary-med);
+            transition: 0.3s;
+        }
+
+        .media-category:hover {
+            transform: translateY(-8px);
+            background: white;
+        }
+
+        .category-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            position: relative;
+            padding: 10px 25px 10px 0;
+            font-size: 15px;
+            font-weight: 600;
+            color: #444;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .task-item::before {
+            content: '✦';
+            position: absolute;
+            right: 0;
+            color: var(--primary-light);
+        }
+
+        .coordination-footer {
+            margin-top: 40px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-item {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .header-box h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-box">
+            <h1>مسؤول الإعلام والنشر</h1>
+            <p>صوت الجمعية وصورتها أمام المجتمع</p>
+        </div>
+
+        <div class="media-grid">
+            
+            <div class="media-category">
+                <div class="category-title">🎬 الإنتاج والمحتوى</div>
+                <div class="task-list">
+                    <div class="task-item">إعداد الخطة الإعلامية السنوية للجمعية.</div>
+                    <div class="task-item">تصوير الأنشطة ومنتجتها وأرشفتها احترافياً.</div>
+                    <div class="task-item">تصميم المنشورات والبروشورات التعريفية.</div>
+                    <div class="task-item">تحضير التعاريف والتقديم للاحتفالات.</div>
+                    <div class="task-item">نشر الأخبار والفعاليات والتعاميم بانتظام.</div>
+                    <div class="task-item">توثيق الإنجازات والأنشطة بشكل دوري.</div>
+                </div>
+            </div>
+
+            <div class="media-category">
+                <div class="category-title">📱 التواصل الرقمي</div>
+                <div class="task-list">
+                    <div class="task-item">التفاعل المباشر مع المتابعين والرد على الاستفسارات.</div>
+                    <div class="task-item">المشاركة في إعداد برامج الأنشطة والاحتفالات.</div>
+                    <div class="task-item">متابعة كل ما ينشر عن الجمعية والرد عند الضرورة.</div>
+                    <div class="task-item">رفع مكانة الجمعية اجتماعياً عبر النشر الهادف.</div>
+                    <div class="task-item">إعداد تقارير إعلامية تفصيلية بعد كل نشاط.</div>
+                    <div class="task-item">الحفاظ على سمعة وصورة الجمعية الإعلامية.</div>
+                </div>
+            </div>
+
+            <div class="media-category">
+                <div class="category-title">🌐 العلاقات العامة</div>
+                <div class="task-list">
+                    <div class="task-item">بناء شبكة إعلامية واسعة خاصة بالجمعية.</div>
+                    <div class="task-item">التواصل الفعال مع القنوات الإعلامية المختلفة.</div>
+                    <div class="task-item">تنسيق اللقاءات الصحفية والإعلامية للمسؤولين.</div>
+                    <div class="task-item">تمثيل الملف الإعلامي في الاجتماعات الإدارية.</div>
+                    <div class="task-item">تطوير الهوية البصرية للجمعية ونشر قيمها.</div>
+                    <div class="task-item">إدارة الحملات الترويجية لمشاريع الجمعية.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="coordination-footer">
+            <div class="footer-item">🤝 التنسيق الدائم مع الرئيس</div>
+            <div class="footer-item">📢 المشاركة في كافة الجلسات</div>
+            <div class="footer-item">💬 نقاشات مستمرة مع الإدارة</div>
+        </div>
+    </div>
+
+</body>
+</html>
