@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسؤول العلاقات العامة - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #81c784;
+            --link-blue: #1565c0;
+            --bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: scale(1.05); }
+
+        .header-main {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-main h1 {
+            color: var(--primary-dark);
+            font-size: 30px;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .header-main .badge {
+            background: var(--primary-med);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* تنسيق الشبكة */
+        .relations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .relation-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid white;
+        }
+
+        .relation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-title {
+            color: var(--primary-dark);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 5px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            font-size: 14.5px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .task-item::before {
+            content: '🤝';
+            font-size: 12px;
+        }
+
+        .management-footer {
+            margin-top: 40px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .management-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .m-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .header-main h1 { font-size: 24px; }
+            .relations-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-main">
+            <h1>مسؤول العلاقات العامة</h1>
+            <div class="badge">بناء الجسور وتعزيز الشراكات الإستراتيجية</div>
+        </div>
+
+        <div class="relations-grid">
+            
+            <div class="relation-card">
+                <span class="card-icon">🏢</span>
+                <div class="card-title">بناء الجسور والشراكات</div>
+                <div class="task-list">
+                    <div class="task-item">فتح علاقات خارجية تخدم تفعيل الأنشطة والبرامج.</div>
+                    <div class="task-item">بناء علاقات مع المؤسسات الحكومية والخيرية والشركات.</div>
+                    <div class="task-item">متابعة الاتفاقيات ومذكرات التفاهم بما يخدم الأهداف.</div>
+                    <div class="task-item">وضع جدول لفتح علاقات مع الجهات الداعمة للجمعية.</div>
+                    <div class="task-item">تعزيز علاقة الجمعية بالمستفيدين والمتطوعين.</div>
+                </div>
+            </div>
+
+            <div class="relation-card">
+                <span class="card-icon">💎</span>
+                <div class="card-title">الاستقطاب والدعم</div>
+                <div class="task-list">
+                    <div class="task-item">فتح علاقات تأمن الدعم المالي واللوجستي للجمعية.</div>
+                    <div class="task-item">التواصل مع الداعمين والرعاة واستقطاب شراكات جديدة.</div>
+                    <div class="task-item">استقبال الزوار والوفود والتنسيق الاحترافي معهم.</div>
+                    <div class="task-item">اقتراح مبادرات مبتكرة لتعزيز صورة الجمعية الذهنية.</div>
+                    <div class="task-item">تنسيق مواعيد الجولات والزيارات التي تقيمها الجمعية.</div>
+                </div>
+            </div>
+
+            <div class="relation-card">
+                <span class="card-icon">📊</span>
+                <div class="card-title">التنظيم والتطوير</div>
+                <div class="task-list">
+                    <div class="task-item">إعداد خطة العلاقات العامة السنوية الشاملة.</div>
+                    <div class="task-item">إعداد تقارير دورية ومفصلة عن كافة أنشطة العلاقات.</div>
+                    <div class="task-item">المحافظة على الصورة الإيجابية للجمعية أمام المجتمع.</div>
+                    <div class="task-item">توثيق روابط التعاون بين اللجان الداخلية والجهات الخارجية.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="management-footer">
+            <strong>التنسيق والعمل الإداري</strong>
+            <div class="management-items">
+                <div class="m-badge">التنسيق الدائم مع الرئيس</div>
+                <div class="m-badge">المشاركة الفعالة في الجلسات</div>
+                <div class="m-badge">النقاش المستمر مع الإدارة</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
