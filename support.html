@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسؤول الدعم اللوجستي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #a5d6a7;
+            --gear-gray: #455a64;
+            --bg-gradient: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: translateX(5px); }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--primary-dark);
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .header .subtitle {
+            background: var(--gear-gray);
+            color: white;
+            padding: 4px 20px;
+            border-radius: 15px;
+            font-size: 13px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* تنسيق الشبكة اللوجستية */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .support-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            border-bottom: 5px solid var(--primary-med);
+            transition: 0.3s;
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-title {
+            color: var(--primary-dark);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #555;
+        }
+
+        .task-item::before {
+            content: '⚙️';
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .admin-box {
+            margin-top: 30px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .admin-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .admin-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 15px;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .support-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header">
+            <h1>مسؤول الدعم اللوجستي</h1>
+            <div class="subtitle">تجهيز، صيانة، واستدامة موارد الجمعية</div>
+        </div>
+
+        <div class="support-grid">
+            
+            <div class="support-card">
+                <span class="card-icon">📦</span>
+                <div class="card-title">إدارة العهدة والممتلكات</div>
+                <div class="task-list">
+                    <div class="task-item">متابعة إمكانيات الجمعية (أجهزة، مستلزمات، كراسي، طاولات) والحفاظ عليها.</div>
+                    <div class="task-item">تجهيز القاعة أو مركز الجمعية لكافة المناسبات والأنشطة.</div>
+                    <div class="task-item">تأمين وشراء كل مستلزمات الجمعية الضرورية.</div>
+                    <div class="task-item">متابعة التجهيزات والمعدات المعارة وإرجاعها بعد الانتهاء.</div>
+                </div>
+            </div>
+
+            <div class="support-card">
+                <span class="card-icon">🛠️</span>
+                <div class="card-title">الدعم الفني والصيانة</div>
+                <div class="task-list">
+                    <div class="task-item">صيانة جميع تجهيزات الجمعية بشكل دوري لضمان عملها.</div>
+                    <div class="task-item">دعم فريق العمل بكافة المستلزمات المطلوبة لإنجاح مهامهم.</div>
+                    <div class="task-item">رفع تقارير فورية عن الأعطال التقنية للجهات المختصة.</div>
+                    <div class="task-item">رفع إحصاء دوري للإدارة عن وضعية التجهيزات والإمكانيات.</div>
+                </div>
+            </div>
+
+            <div class="support-card">
+                <span class="card-icon">📝</span>
+                <div class="card-title">التوثيق والرقابة الإدارية</div>
+                <div class="task-list">
+                    <div class="task-item">رفع الفواتير المطلوبة إلى أمين السر لتوثيق المصاريف.</div>
+                    <div class="task-item">توثيق جميع الأنشطة والإنجازات الخاصة بملف الدعم.</div>
+                    <div class="task-item">تنظيم وإدارة الوقت المتعلق بكافة مهام ملف الدعم.</div>
+                    <div class="task-item">إجراء تقييم سنوي للنشاط وتحديد نقاط الضعف لتطويرها.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="admin-box">
+            <strong>التنسيق والمتابعة الإدارية</strong>
+            <div class="admin-grid">
+                <div class="admin-tag">التنسيق الدائم مع الرئيس</div>
+                <div class="admin-tag">المشاركة الفعالة في الجلسات</div>
+                <div class="admin-tag">النقاش المستمر مع الإدارة</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
