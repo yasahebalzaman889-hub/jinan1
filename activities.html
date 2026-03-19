@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسؤول الأنشطة والبرامج - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #388e3c;
+            --primary-light: #c8e6c9;
+            --accent-orange: #f57c00; /* لون للتمييز الحركي */
+            --bg: #f9fbf9;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .header-main {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-main h1 {
+            color: var(--primary-dark);
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .header-main .subtitle {
+            background: var(--primary-med);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* مراحل النشاط */
+        .phase-container {
+            display: grid;
+            gap: 25px;
+        }
+
+        .phase-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            border-right: 8px solid var(--primary-med);
+            transition: 0.3s;
+        }
+
+        .phase-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .phase-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .task-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .task-item {
+            background: #f1f8e9;
+            padding: 12px 15px;
+            border-radius: 12px;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-item::before {
+            content: '✔';
+            color: var(--primary-med);
+            font-weight: bold;
+        }
+
+        /* الاحتفالات الثابتة */
+        .events-box {
+            background: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            margin-top: 30px;
+        }
+
+        .events-box h3 { margin-top: 0; color: var(--primary-light); }
+        
+        .event-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .admin-footer {
+            margin-top: 30px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-top: 2px dashed var(--primary-light);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .task-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-main">
+            <h1>مسؤول الأنشطة والبرامج</h1>
+            <div class="subtitle">تخطيط، تنفيذ، وتقييم الفعاليات</div>
+        </div>
+
+        <div class="phase-container">
+            
+            <div class="phase-card">
+                <div class="phase-title">🗓️ أولاً: مرحلة التخطيط والتحضير</div>
+                <div class="task-list">
+                    <div class="task-item">إعداد الخطة السنوية أو الفصلية للأنشطة.</div>
+                    <div class="task-item">اقتراح برامج جديدة تخدم أهداف الجمعية.</div>
+                    <div class="task-item">تحديد الفئة المستهدفة ووضع الجدول الزمني.</div>
+                    <div class="task-item">التنسيق مع المدربين والأساتذة والمتطوعين.</div>
+                    <div class="task-item">تجهيز المكان والمواد بالتعاون مع اللجنة.</div>
+                    <div class="task-item">توزيع المهام بدقة على فريق العمل.</div>
+                </div>
+            </div>
+
+            <div class="phase-card" style="border-right-color: #fb8c00;">
+                <div class="phase-title">⚡ ثانياً: مرحلة التنفيذ والمتابعة</div>
+                <div class="task-list">
+                    <div class="task-item">تفعيل الورش، الحملات، والمسابقات.</div>
+                    <div class="task-item">متابعة سير النشاط لحظة بلحظة أثناء التنفيذ.</div>
+                    <div class="task-item">متابعة التزام المتطوعين وجدية العمل.</div>
+                    <div class="task-item">حل أي مشاكل طارئة تظهر أثناء النشاط.</div>
+                    <div class="task-item">الالتزام التام بالميزانية المحددة للنشاط.</div>
+                </div>
+            </div>
+
+            <div class="phase-card" style="border-right-color: #0288d1;">
+                <div class="phase-title">📊 ثالثاً: مرحلة التقييم والتطوير</div>
+                <div class="task-list">
+                    <div class="task-item">تقييم نجاح النشاط وقياس مدى تحقيق الأهداف.</div>
+                    <div class="task-item">كتابة تقرير النتائج ورفعه للإدارة.</div>
+                    <div class="task-item">جمع آراء المشاركين لتحسين البرامج مستقبلاً.</div>
+                    <div class="task-item">رفع تقارير دورية عن الإيجابيات والسلبيات.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="events-box">
+            <h3>🎊 التحضير للاحتفالات والمناسبات الثابتة</h3>
+            <div class="event-tags">
+                <span class="tag">الاحتفال السنوي</span>
+                <span class="tag">عيد الفطر</span>
+                <span class="tag">عيد الأضحى</span>
+                <span class="tag">١٥ شعبان</span>
+                <span class="tag">المولد النبوي الشريف</span>
+                <span class="tag">١٣ رجب</span>
+                <span class="tag">عاشوراء</span>
+                <span class="tag">الأربعين</span>
+            </div>
+        </div>
+
+        <div class="admin-footer">
+            تنسيق دائم مع الرئيس • مشاركة فاعلة في الجلسات • نقاش مستمر مع الإدارة
+        </div>
+    </div>
+
+</body>
+</html>
