@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسؤول الشؤون المعيشية والصحية - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #81c784;
+            --heart-red: #e53935;
+            --bg-gradient: linear-gradient(135deg, #f1f8e9 0%, #c8e6c9 100%);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-dark); color: white; transform: translateX(5px); }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--primary-dark);
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .header .motto {
+            color: var(--primary-med);
+            font-weight: 700;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        /* شبكة المهام */
+        .welfare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .welfare-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-med);
+            transition: 0.3s;
+        }
+
+        .welfare-card:hover {
+            transform: translateY(-5px);
+            background: white;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            gap: 10px;
+            color: #444;
+        }
+
+        .task-item span { color: var(--primary-med); }
+
+        /* صندوق السرية والحياد */
+        .ethical-box {
+            margin-top: 30px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .ethics-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .ethics-item div { font-size: 20px; margin-bottom: 5px; }
+
+        @media (max-width: 600px) {
+            .welfare-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header">
+            <h1>مسؤول الشؤون المعيشية والصحية</h1>
+            <div class="motto">العدالة في التوزيع.. السرية في التعامل.. الرحمة في الخدمة</div>
+        </div>
+
+        <div class="welfare-grid">
+            
+            <div class="welfare-card">
+                <div class="card-header">🔍 الدراسة والتقييم</div>
+                <div class="task-list">
+                    <div class="task-item"><span>•</span> إجراء جرد شامل للأوضاع المعيشية والصحية للمشتركين.</div>
+                    <div class="task-item"><span>•</span> استقبال طلبات المساعدات ودراسة الملفات بعناية.</div>
+                    <div class="task-item"><span>•</span> إجراء زيارات ميدانية لتقييم الحالات الخاصة.</div>
+                    <div class="task-item"><span>•</span> تصنيف الحالات (عاجلة / متوسطة / عادية) حسب الأولوية.</div>
+                    <div class="task-item"><span>•</span> إعداد تقارير اجتماعية دقيقة توضح الاحتياجات الفعلية.</div>
+                </div>
+            </div>
+
+            <div class="welfare-card">
+                <div class="card-header">📦 التنفيذ والإشراف</div>
+                <div class="task-list">
+                    <div class="task-item"><span>•</span> تحديد نوع المساعدة (مالية، صحية، غذائية، تعليمية، سكنية).</div>
+                    <div class="task-item"><span>•</span> الإشراف المباشر على توزيع المساعدات لمستحقيها.</div>
+                    <div class="task-item"><span>•</span> متابعة أثر المساعدة على الحالة بعد تقديمها.</div>
+                    <div class="task-item"><span>•</span> اقتراح برامج وحلول لتحسين الأوضاع المعيشية.</div>
+                    <div class="task-item"><span>•</span> إعداد خطط سنوية للاحتياجات الأساسية المتوقعة.</div>
+                </div>
+            </div>
+
+            <div class="welfare-card">
+                <div class="card-header">💻 نظم المعلومات والتقارير</div>
+                <div class="task-list">
+                    <div class="task-item"><span>•</span> إنشاء وتحديث قاعدة بيانات شاملة للمستفيدين.</div>
+                    <div class="task-item"><span>•</span> إعداد إحصائيات دورية عن عدد ونوع الحالات.</div>
+                    <div class="task-item"><span>•</span> رفع نتائج دراسة الأوضاع الاجتماعية للإدارة دورياً.</div>
+                    <div class="task-item"><span>•</span> إجراء تقييم سنوي للأعمال والخدمات المقدمة.</div>
+                    <div class="task-item"><span>•</span> التنسيق الدائم مع الرئيس والمشاركة في الجلسات.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ethical-box">
+            <div class="ethics-item">
+                <div>🤐</div>
+                <strong>السرية التامة</strong>
+                <p style="font-size: 13px; opacity: 0.9;">حفظ الوثائق ومعلومات المستفيدين بسرية مطلقة</p>
+            </div>
+            <div class="ethics-item">
+                <div>⚖️</div>
+                <strong>الحياد والعدالة</strong>
+                <p style="font-size: 13px; opacity: 0.9;">الالتزام بالحياد التام وعدم التمييز بين الحالات</p>
+            </div>
+            <div class="ethics-item">
+                <div>📜</div>
+                <strong>الالتزام بالنظام</strong>
+                <p style="font-size: 13px; opacity: 0.9;">العمل وفق لوائح وأنظمة الجمعية المعتمدة</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
