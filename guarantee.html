@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الكفالة - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-orange: #ef6c00;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 32px; }
+        .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 18px; }
+
+        .policy-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            margin-bottom: 30px;
+        }
+
+        .item-list { list-style: none; padding: 0; margin: 0; }
+
+        .policy-item {
+            font-size: 15.5px;
+            padding: 15px 0;
+            display: flex;
+            gap: 15px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.7;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .policy-item:last-child { border-bottom: none; }
+        .policy-item span { 
+            color: white; 
+            background: var(--primary-dark);
+            font-weight: 700; 
+            flex-shrink: 0; 
+            width: 28px; 
+            height: 28px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%;
+            font-size: 14px;
+        }
+
+        .important-warning {
+            background: #fff3e0;
+            border-right: 5px solid var(--accent-orange);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            color: #e65100;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 24px; }
+            .policy-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>شروط وضوابط الكفالة</h1>
+            <p>نظام التكافل القانوني والشرعي لجمعية قاضي الحوائج</p>
+        </div>
+
+        <div class="policy-card">
+            <div class="item-list">
+                <div class="policy-item"><span>1</span> الكفيل يجب أن يكون مشترك بالجمعية ولديه رصيد مالي .</div>
+                <div class="policy-item"><span>2</span> الكفيل يجب ان لا يكون مقترض .</div>
+                <div class="policy-item"><span>3</span> يحق لأي مشترك بالكفالة بعد مرور شهر من انتسابه .</div>
+                <div class="policy-item"><span>4</span> يجب على الكفيل التوقيع على كل المستندات المطلوبة منه ضمن الكفالة .</div>
+                <div class="policy-item"><span>5</span> لا يحق للكفيل سحب قرض في حال كانت كفالته كاملة للمقترض .</div>
+                <div class="policy-item"><span>6</span> لا يحق للكفيل إلغاء كفالته قبل إغلاق القرض نهائياً .</div>
+                <div class="policy-item"><span>7</span> تنتهي الكفالة بعد انتهاء القيمة المكفول به المقترض وليس كامل القرض .</div>
+                <div class="policy-item"><span>8</span> الكفالة تكون بقيمة الرصيد الأصلي للكفيل وما دون ولا يحق له التكفل بأكثر من ذلك .</div>
+                <div class="policy-item"><span>9</span> الكفيل يلتزم شرعاً ونظاماً بسداد كامل المبلغ المتبقي فور تعثر المكفول دون تأخير أو اعتراض .</div>
+                <div class="policy-item"><span>10</span> في حال تخلف المقترض والكفيل عن الدفع يتم حسم المبلغ من رصيدهما الأصلي .</div>
+                <div class="policy-item"><span>11</span> قبول الكفيل مسبقاً بأي إجراء إداري تتخذه الجمعية في حال عدم الالتزام بالتسديد .</div>
+                <div class="policy-item"><span>12</span> يحق للمندوب وضع اسم أي مشترك ضمن مجموعته كفيل شرط أن يكون لدى الإدارة تفويض خطي موقع من قبل المشترك نفسه .</div>
+            </div>
+
+            <div class="important-warning">
+                ⚠️ ملاحظة قانونية: الكفالة التزام مالي وقانوني يترتب عليه مسؤوليات مباشرة تجاه الجمعية.
+            </div>
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - الدائرة القانونية والمالية © 2026
+        </div>
+    </div>
+
+</body>
+</html>
