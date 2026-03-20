@@ -10,18 +10,21 @@
             --primary-green: #2e7d32;
             --dark-green: #1b5e20;
             --accent-gold: #fbc02d;
-            --soft-bg: #f9fbf9;
+            /* توحيد لون الخلفية مع باقي الصفحات */
+            --soft-bg: #f4f7f4; 
         }
 
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            background-color: var(--soft-bg);
+            /* استخدام التدرج الناعم المعتمد في الموقع */
+            background: linear-gradient(135deg, #f4f7f4 0%, #ffffff 100%);
             color: #333;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
         .container {
@@ -44,6 +47,13 @@
             padding: 8px 20px;
             border-radius: 50px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateX(5px);
+            background: var(--primary-green);
+            color: white;
         }
 
         .hero-header {
@@ -57,6 +67,7 @@
         }
 
         .hero-header h1 { margin: 0; font-size: 32px; }
+        .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 18px; }
         
         .spiritual-banner {
             background: #fff9c4;
@@ -68,6 +79,7 @@
             font-weight: 700;
             color: var(--dark-green);
             margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .benefits-grid {
@@ -126,6 +138,7 @@
             font-weight: 600;
             color: #777;
             padding: 20px;
+            border-top: 1px solid #ddd;
         }
 
         @media (max-width: 600px) {
@@ -145,7 +158,7 @@
         </div>
 
         <div class="spiritual-banner">
-            ⭐  بالدرجة الأولى رضا الله تعالى ⭐
+            ⭐ بالدرجة الأولى رضا الله تعالى ⭐
         </div>
 
         <div class="benefits-grid">
