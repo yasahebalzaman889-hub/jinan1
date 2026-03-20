@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الانسحاب - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-red: #c62828;
+            --accent-gold: #fbc02d;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient); /* توحيد اللون هنا */
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #b71c1c 0%, var(--accent-red) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(198, 40, 40, 0.2);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 32px; }
+        .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 18px; }
+
+        .warning-box {
+            background: white;
+            border: 2px solid var(--accent-red);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: var(--accent-red);
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .withdrawal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .policy-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .policy-card:hover { transform: translateY(-5px); background: white; border-color: var(--accent-red); }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            font-size: 19px;
+            font-weight: 700;
+            color: #b71c1c;
+            border-bottom: 2px solid #feeef0;
+            padding-bottom: 10px;
+        }
+
+        .item-list { list-style: none; padding: 0; margin: 0; }
+
+        .policy-item {
+            font-size: 14.5px;
+            padding: 10px 0;
+            display: flex;
+            gap: 12px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.6;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .policy-item:last-child { border-bottom: none; }
+        .policy-item span { color: var(--accent-red); font-weight: 700; }
+
+        .important-notice {
+            grid-column: 1 / -1;
+            background: white;
+            border: 3px solid var(--accent-gold);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 24px; }
+            .withdrawal-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>شروط وإجراءات الانسحاب</h1>
+            <p>الأنظمة القانونية والمالية لعام 2026</p>
+        </div>
+
+        <div class="warning-box">
+            "يعتبر الانسحاب تعسفياً إذا كان بقصد التهرب من خسارة أو التسبب بضرر متعمد"
+        </div>
+
+        <div class="withdrawal-grid">
+            
+            <div class="policy-card">
+                <div class="card-header">📋 الإجراءات الإدارية</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1.</span> تقديم طلب رسمي (استمارة) مع شرح الأسباب.</div>
+                    <div class="policy-item"><span>2.</span> لا يقبل الانسحاب الشفهي تحت أي ظروف.</div>
+                    <div class="policy-item"><span>3.</span> يسري انسحاب الإداريين بعد تسليم المهام رسمياً.</div>
+                    <div class="policy-item"><span>4.</span> يجوز لمجلس الإدارة تأجيل القبول لمصلحة الجمعية.</div>
+                    <div class="policy-item"><span>5.</span> لا يعد الانسحاب نافذاً إلا بإشعار مكتوب بالقبول.</div>
+                    <div class="policy-item"><span>6.</span> تسليم بطاقة الانتساب شرط أساسي لاستلام الرصيد.</div>
+                    <div class="policy-item"><span>7.</span> توقيع إقرار ذمة نهائي يثبت براءة ذمة الطرفين.</div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">💰 التسويات المالية</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1.</span> لا يحق الانسحاب في حال كان المشترك "متكفلاً".</div>
+                    <div class="policy-item"><span>2.</span> لا يحق للمقترض الانسحاب إلا إذا فاق رصيده قيمة القرض.</div>
+                    <div class="policy-item"><span>3.</span> يسلم الرصيد المتبقي بعد شهر من تاريخ الطلب.</div>
+                    <div class="policy-item"><span>4.</span> استلام الرصيد الأصلي فقط ولا حق في الرصيد الاحتياطي.</div>
+                    <div class="policy-item"><span>5.</span> لا يحق للمنسحب المطالبة بالرصيد الخاص بالجمعية.</div>
+                    <div class="policy-item"><span>6.</span> تُحذف عدد أشهر الانتساب من ملف المشترك عند انسحابه.</div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">🔒 الالتزامات والمسؤوليات</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1.</span> منع تمثيل الجمعية أو استخدام اسمها بعد الانسحاب.</div>
+                    <div class="policy-item"><span>2.</span> الملاحقة القضائية عند التشويه أو انتحال صفة الجمعية.</div>
+                    <div class="policy-item"><span>3.</span> المسؤولية عن الأضرار الناتجة عن الانسحاب المفاجئ.</div>
+                    <div class="policy-item"><span>4.</span> الحفاظ على سرية المعلومات حتى بعد الانسحاب.</div>
+                    <div class="policy-item"><span>5.</span> حق الجمعية في طلب تعويض عن الإخلال المتعمد.</div>
+                    <div class="policy-item"><span>6.</span> يمنع منعاً باتاً العبث بمشاريع الجمعية القائمة.</div>
+                    <div class="policy-item"><span>7.</span> يمنع استقطاب أفراد من الجمعية بعد الانسحاب.</div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">🚫 فقدان الحقوق والقيود</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1.</span> فقدان كافة الحقوق والامتيازات داخل الجمعية فوراً.</div>
+                    <div class="policy-item"><span>2.</span> لا يحق للمنسحب رفع دعوى قضائية على الجمعية.</div>
+                    <div class="policy-item"><span>3.</span> لا يحق له الاطلاع على مراسلات الجمعية لاحقاً.</div>
+                    <div class="policy-item"><span>4.</span> سقوط الحق في كافة الخدمات الطبية والاجتماعية.</div>
+                    <div class="policy-item"><span>5.</span> لا يحق الاعتراض على قرارات اتخذت بعد الانسحاب.</div>
+                    <div class="policy-item"><span>6.</span> إعادة القبول ممكنة ولكن بشروط وعقود جديدة.</div>
+                </div>
+            </div>
+
+            <div class="important-notice">
+                <h3 style="margin-top: 0; color: #856404;">⚖️ آلية التظلم (بند 22 & 23)</h3>
+                <p style="font-weight: 600; line-height: 1.8; color: #333;">
+                    عند الشعور بالمظلومية، يحق للمنسحب مراجعة الإدارة أو مسؤول الجمعية، وفي حال تعذر الحل يمكن التحويل إلى <strong>القضاء الشرعي</strong>. 
+                    <br>
+                    <span style="color: var(--accent-red);">* تسقط المطالبة بأي حق أو تظلم بعد مرور شهر واحد من تاريخ الانسحاب.</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-note">
+            جميع الشروط تخضع للنظام الداخلي لجمعية قاضي الحوائج © 2026
+        </div>
+    </div>
+
+</body>
+</html>
