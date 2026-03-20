@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شروط الانسحاب - جمعية قاضي الحوائج</title>
+    <title>شروط الانسحاب التفصيلية - جمعية قاضي الحوائج</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -18,7 +18,7 @@
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            background: var(--bg-gradient); /* توحيد اللون هنا */
+            background: var(--bg-gradient);
             color: #222;
             min-height: 100vh;
             display: flex;
@@ -29,7 +29,7 @@
 
         .container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
             animation: fadeIn 0.8s ease-out;
         }
 
@@ -81,7 +81,7 @@
 
         .withdrawal-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 20px;
         }
 
@@ -112,7 +112,7 @@
 
         .policy-item {
             font-size: 14.5px;
-            padding: 10px 0;
+            padding: 12px 0;
             display: flex;
             gap: 12px;
             font-weight: 600;
@@ -122,14 +122,14 @@
         }
 
         .policy-item:last-child { border-bottom: none; }
-        .policy-item span { color: var(--accent-red); font-weight: 700; }
+        .policy-item span { color: var(--accent-red); font-weight: 700; flex-shrink: 0; width: 25px; }
 
-        .important-notice {
+        .legal-section {
             grid-column: 1 / -1;
             background: white;
             border: 3px solid var(--accent-gold);
-            padding: 25px;
-            border-radius: 20px;
+            padding: 30px;
+            border-radius: 25px;
             margin-top: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
@@ -159,78 +159,81 @@
 
         <div class="hero-header">
             <h1>شروط وإجراءات الانسحاب</h1>
-            <p>الأنظمة القانونية والمالية لعام 2026</p>
+            <p>الأنظمة واللوائح الرسمية الكاملة لعام 2026</p>
         </div>
 
         <div class="warning-box">
-            "يعتبر الانسحاب تعسفياً إذا كان بقصد التهرب من خسارة أو التسبب بضرر متعمد"
+            بند 29: "يعتبر الانسحاب تعسفياً إذا كان بقصد التهرب من خسارة أو التسبب بضرر متعمد"
         </div>
 
         <div class="withdrawal-grid">
             
             <div class="policy-card">
-                <div class="card-header">📋 الإجراءات الإدارية</div>
+                <div class="card-header">📝 طلب الانسحاب والإجراءات</div>
                 <div class="item-list">
-                    <div class="policy-item"><span>1.</span> تقديم طلب رسمي (استمارة) مع شرح الأسباب.</div>
-                    <div class="policy-item"><span>2.</span> لا يقبل الانسحاب الشفهي تحت أي ظروف.</div>
-                    <div class="policy-item"><span>3.</span> يسري انسحاب الإداريين بعد تسليم المهام رسمياً.</div>
-                    <div class="policy-item"><span>4.</span> يجوز لمجلس الإدارة تأجيل القبول لمصلحة الجمعية.</div>
-                    <div class="policy-item"><span>5.</span> لا يعد الانسحاب نافذاً إلا بإشعار مكتوب بالقبول.</div>
-                    <div class="policy-item"><span>6.</span> تسليم بطاقة الانتساب شرط أساسي لاستلام الرصيد.</div>
-                    <div class="policy-item"><span>7.</span> توقيع إقرار ذمة نهائي يثبت براءة ذمة الطرفين.</div>
+                    <div class="policy-item"><span>1</span> في حال قرر المشترك الانسحاب من الجمعية عليه تقديم طلب إلى الإدارة ( تعبئة الاستمارة المعتمدة ) مع شرح الأسباب .</div>
+                    <div class="policy-item"><span>2</span> لا يقبل الانسحاب الشفهي تحت أي ظروف .</div>
+                    <div class="policy-item"><span>3</span> في حال كان المشترك يشغل منصباً إدارياً يسري الانسحاب بعد تسليم المهام رسمياً .</div>
+                    <div class="policy-item"><span>4</span> يجوز لمجلس الإدارة تأجيل قبول الانسحاب لمصلحة الجمعية لمدة محددة .</div>
+                    <div class="policy-item"><span>5</span> لا يعد الانسحاب نافذاً إلا بعد صدور إشعار مكتوب بقبول .</div>
+                    <div class="policy-item"><span>6</span> يطلب من المشترك المنسحب توقيع إقرار ذمة يثبت عدم وجود أي حقوق أو التزامات متبادلة .</div>
                 </div>
             </div>
 
             <div class="policy-card">
-                <div class="card-header">💰 التسويات المالية</div>
+                <div class="card-header">💰 التسويات والرصيد المالي</div>
                 <div class="item-list">
-                    <div class="policy-item"><span>1.</span> لا يحق الانسحاب في حال كان المشترك "متكفلاً".</div>
-                    <div class="policy-item"><span>2.</span> لا يحق للمقترض الانسحاب إلا إذا فاق رصيده قيمة القرض.</div>
-                    <div class="policy-item"><span>3.</span> يسلم الرصيد المتبقي بعد شهر من تاريخ الطلب.</div>
-                    <div class="policy-item"><span>4.</span> استلام الرصيد الأصلي فقط ولا حق في الرصيد الاحتياطي.</div>
-                    <div class="policy-item"><span>5.</span> لا يحق للمنسحب المطالبة بالرصيد الخاص بالجمعية.</div>
-                    <div class="policy-item"><span>6.</span> تُحذف عدد أشهر الانتساب من ملف المشترك عند انسحابه.</div>
-                </div>
-            </div>
-
-            <div class="policy-card">
-                <div class="card-header">🔒 الالتزامات والمسؤوليات</div>
-                <div class="item-list">
-                    <div class="policy-item"><span>1.</span> منع تمثيل الجمعية أو استخدام اسمها بعد الانسحاب.</div>
-                    <div class="policy-item"><span>2.</span> الملاحقة القضائية عند التشويه أو انتحال صفة الجمعية.</div>
-                    <div class="policy-item"><span>3.</span> المسؤولية عن الأضرار الناتجة عن الانسحاب المفاجئ.</div>
-                    <div class="policy-item"><span>4.</span> الحفاظ على سرية المعلومات حتى بعد الانسحاب.</div>
-                    <div class="policy-item"><span>5.</span> حق الجمعية في طلب تعويض عن الإخلال المتعمد.</div>
-                    <div class="policy-item"><span>6.</span> يمنع منعاً باتاً العبث بمشاريع الجمعية القائمة.</div>
-                    <div class="policy-item"><span>7.</span> يمنع استقطاب أفراد من الجمعية بعد الانسحاب.</div>
+                    <div class="policy-item"><span>1</span> لا يحق للمشترك الانسحاب في حال كان متكفلاً .</div>
+                    <div class="policy-item"><span>2</span> لا يحق للمشترك الانسحاب في حال كان مقترض إلا إذا كان رصيده يفوق قيمة القرض .</div>
+                    <div class="policy-item"><span>3</span> يسلم المبلغ المتبقي له من رصيده الأصلي بعد شهر من تاريخ رفع الطلب .</div>
+                    <div class="policy-item"><span>4</span> يجب على المنسحب تسليم بطاقة الانتساب قبل استلام رصيده .</div>
+                    <div class="policy-item"><span>5</span> يحق للمشترك اخذ رصيده الأصلي ولا يحق له المطالبة بالرصيد الاحتياط .</div>
+                    <div class="policy-item"><span>6</span> لا يحق للمشترك المنسحب المطالبة بالرصيد الخاص بالجمعية .</div>
                 </div>
             </div>
 
             <div class="policy-card">
                 <div class="card-header">🚫 فقدان الحقوق والقيود</div>
                 <div class="item-list">
-                    <div class="policy-item"><span>1.</span> فقدان كافة الحقوق والامتيازات داخل الجمعية فوراً.</div>
-                    <div class="policy-item"><span>2.</span> لا يحق للمنسحب رفع دعوى قضائية على الجمعية.</div>
-                    <div class="policy-item"><span>3.</span> لا يحق له الاطلاع على مراسلات الجمعية لاحقاً.</div>
-                    <div class="policy-item"><span>4.</span> سقوط الحق في كافة الخدمات الطبية والاجتماعية.</div>
-                    <div class="policy-item"><span>5.</span> لا يحق الاعتراض على قرارات اتخذت بعد الانسحاب.</div>
-                    <div class="policy-item"><span>6.</span> إعادة القبول ممكنة ولكن بشروط وعقود جديدة.</div>
+                    <div class="policy-item"><span>1</span> عند الانسحاب يفقد المشترك جميع حقوقه وامتيازاته داخل الجمعية .</div>
+                    <div class="policy-item"><span>2</span> في حال انسحب المشترك تحذف عدد أشهر الانتساب له من ملفه .</div>
+                    <div class="policy-item"><span>3</span> لا يحق له الاطلاع على مراسلات الجمعية بعد الانسحاب .</div>
+                    <div class="policy-item"><span>4</span> يسقط حقه في الاستفادة من خدمات الجمعية بعد الانسحاب .</div>
+                    <div class="policy-item"><span>5</span> لا يحق له الاعتراض على قرارات اتخذت بعد انسحابه .</div>
+                    <div class="policy-item"><span>6</span> يجوز أعادت قبول المنسحب ولكن بشروط جديدة .</div>
                 </div>
             </div>
 
-            <div class="important-notice">
-                <h3 style="margin-top: 0; color: #856404;">⚖️ آلية التظلم (بند 22 & 23)</h3>
-                <p style="font-weight: 600; line-height: 1.8; color: #333;">
-                    عند الشعور بالمظلومية، يحق للمنسحب مراجعة الإدارة أو مسؤول الجمعية، وفي حال تعذر الحل يمكن التحويل إلى <strong>القضاء الشرعي</strong>. 
-                    <br>
-                    <span style="color: var(--accent-red);">* تسقط المطالبة بأي حق أو تظلم بعد مرور شهر واحد من تاريخ الانسحاب.</span>
-                </p>
+            <div class="policy-card">
+                <div class="card-header">⚖️ الالتزامات القانونية</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1</span> لا يحق له تمثيل الجمعية أو استخدام اسمها بعد الانسحاب .</div>
+                    <div class="policy-item"><span>2</span> يحق لإدارة الجمعية رفع دعوة قضائية أو شرعية في حال قام بتشويه أو القيام بأي إجراء باسم الجمعية بعد انسحابه .</div>
+                    <div class="policy-item"><span>3</span> يتحمل المنسحب مسؤولية أي أضرار ناتجة عن انسحابه المفاجئ .</div>
+                    <div class="policy-item"><span>4</span> يلتزم المشترك بالحفاظ على سرية المعلومات حتى بعد انسحابه .</div>
+                    <div class="policy-item"><span>5</span> يحق للجمعية المطالبة بتعويض عند ثبوت الإخلال المتعمد .</div>
+                    <div class="policy-item"><span>6</span> لا يحق للمشترك المنسحب العبث بمشاريع الجمعية .</div>
+                    <div class="policy-item"><span>7</span> لا يحق للمشترك المنسحب رفع إي دعوة قضائية ، على الجمعية أو إدارتها .</div>
+                    <div class="policy-item"><span>8</span> لا يجوز له استقطاب أفراد إلى الجمعية بعد انسحابه .</div>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h3 style="margin-top: 0; color: #b71c1c; border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px;">⚖️ آلية التظلم والمدد القانونية</h3>
+                <div class="item-list">
+                    <div class="policy-item">
+                        <span>1</span> في حال شعر المنسحب بأي مظلومية أو غبن أو إجحاف بحقه ، يحق له مراجعة الإدارة أو رفع دعوة لدى مسؤول الجمعية ، وفي حال عدم الوصول لنتيجة يمكنه تحويلها إلى القضاء الشرعي .
+                    </div>
+                    <div class="policy-item" style="color: #b71c1c; background: #fffde7; padding: 15px; border-radius: 10px; border: 1px solid var(--accent-gold);">
+                        <span>2</span> لا يحق للمنسحب القيام ببند رقم 22 أو المطالبة بأي حق بعد مرور شهر من انسحابه .
+                    </div>
+                </div>
             </div>
 
         </div>
 
         <div class="footer-note">
-            جميع الشروط تخضع للنظام الداخلي لجمعية قاضي الحوائج © 2026
+            جميع هذه البنود الـ 29 مصدق عليها وتخضع للنظام الداخلي لجمعية قاضي الحوائج © 2026
         </div>
     </div>
 
