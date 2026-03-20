@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الاقتراض - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-gold: #fbc02d;
+            --accent-blue: #1565c0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 32px; }
+        .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 18px; }
+
+        .loan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .policy-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .policy-card:hover { transform: translateY(-5px); background: white; border-color: var(--primary-dark); }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-bottom: 2px solid #e8f5e9;
+            padding-bottom: 10px;
+        }
+
+        .item-list { list-style: none; padding: 0; margin: 0; }
+
+        .policy-item {
+            font-size: 14.5px;
+            padding: 12px 0;
+            display: flex;
+            gap: 12px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.6;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .policy-item:last-child { border-bottom: none; }
+        .policy-item span { color: var(--primary-dark); font-weight: 700; flex-shrink: 0; width: 25px; }
+
+        .highlight-box {
+            grid-column: 1 / -1;
+            background: #fff9c4;
+            border: 2px solid var(--accent-gold);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 700;
+            color: #5d4037;
+            font-size: 17px;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 24px; }
+            .loan-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>شروط وإجراءات الاقتراض</h1>
+            <p>نظام التكافل المالي لجمعية قاضي الحوائج لعام 2026</p>
+        </div>
+
+        <div class="loan-grid">
+            
+            <div class="policy-card">
+                <div class="card-header">📋 الأهلية وتقديم الطلب</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1</span> يجب أن يكون المقترض عضواً مسجلاً في الجمعية منذ مدة محددة ( الحد الأدنى ثلاث أشهر ) .</div>
+                    <div class="policy-item"><span>2</span> يجب أن يكون المشترك ملتزماً بدفع اشتراكاته وأي التزامات مالية سابقة دون تأخير .</div>
+                    <div class="policy-item"><span>3</span> تعطى القروض إلى المشتركين بحسب الأولوية والضروريات .</div>
+                    <div class="policy-item"><span>4</span> يرفع طلب القرض عبر الاستمارة المخصصة ، وتدرس من قبل الإدارة ، وتحدد المدة الزمنية لتسليم الأموال .</div>
+                    <div class="policy-item"><span>5</span> يجب على المقترض التوقيع على كل المستندات المطلوبة .</div>
+                    <div class="policy-item"><span>6</span> يجب توثيق كل حركات القروض بوثائق تحفظ في أرشيف الإدارة .</div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">💰 قيمة القرض والضمانات</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1</span> يحق للمشترك سحب قرض بقيمة رصيده الأصلي ، وفي حال فاقت القيمة رصيده عليه إحضار كفلاء من ضمن الجمعية .</div>
+                    <div class="policy-item"><span>2</span> لا يحق للمقترض تجديد قرضه إلا بعد تسديد 50% ولكن ضمن الألوية .</div>
+                    <div class="policy-item"><span>3</span> عند صرف الأموال للقروض يجب أن تتوفر جميع الإمضاءات المرتبطة بالإدارة .</div>
+                    <div class="policy-item"><span>4</span> الإدارة تتعاطى مع المشتركين بإعطاء القروض بناءاً لمعاملتهم المسبقة والتزامهم بالتسديد ( وفي حال كان ملتزم 100 % الجمعية تدعمه بنسبة 20 % عند الاستطاعة ) .</div>
+                    <div class="policy-item"><span>5</span> يحق للمجمد من قبل الإدارة لمدة محددة الاستفادة من القروض .</div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">💹 نسب التبرع والسداد المبكر</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1</span> نسبة التبرع للقروض التي تعطى هي 2 % بناءاً لقيمة القرض + 2$ مضروبة بعدد أشهر التقسيط .</div>
+                    <div class="policy-item"><span>2</span> تضاف نسبة التبرع المئوية ( 2 % ) + ( 2$ ) عن كل شهر على قيمة القرض المعطى .</div>
+                    <div class="policy-item"><span>3</span> في حال تم تسديد القرض قبل المدة المحددة يحذف قيمة التبرع بحسب عدد أشهر المدفوعة سلف .</div>
+                    <div class="policy-item"><span>4</span> تحدد مدة التسديد بالقرض من قبل المقترض ( الحد الأقصى 20 شهر ) .</div>
+                    <div class="policy-item"><span>5</span> إذا تيقنت الإدارة بان أموال الاقتراض ذاهبة باتجاه الحرام يلغى القرض .</div>
+                </div>
+            </div>
+
+            <div class="policy-card">
+                <div class="card-header">⚠️ الجزاءات وصلاحيات المندوب</div>
+                <div class="item-list">
+                    <div class="policy-item"><span>1</span> يجب على المقترض تسديد الإقساط الشهرية بحسب المواعيد المحددة بناءاً للنظام .</div>
+                    <div class="policy-item"><span>2</span> في حال تأخر المقترض عن التسديد يوجه إليه إنذار ويتحمل بند الجزائي ( 2 $ ) تبرع للجمعية عن كل شهر .</div>
+                    <div class="policy-item"><span>3</span> في حال تخلف المقترض عن التسديد يتم حسم مبلغ من رصيده الأصلي ورصيد الكفيل بعد إعلامه .</div>
+                    <div class="policy-item"><span>4</span> يحق للإدارة اخذ أي قرار تراه مناسب بحق من يتخلف عن التسديد .</div>
+                    <div class="policy-item"><span>5</span> يمكن تسهيل الإقساط في بعض الحالات الاستثنائية حسب ظروف المشترك بعد النظر في أمره من قبل الإدارة في حال توفرت لديها الوضعية المعيشية للمشترك .</div>
+                    <div class="policy-item"><span>6</span> يحق للمندوب سحب قرض باسم أي مشترك ضمن مجموعته شرط أن يكون لدى الإدارة تفويض خطي موقع من قبل المشترك نفسه .</div>
+                    <div class="policy-item"><span>7</span> قيمة القروض التي يحق للمندوب سحبها هي 35 % من قيمة أرصدت مجموعته .</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                📌 مطلوب من الإدارة السعي بان تكون القروض من الرصيد الخاص بالجمعية والرصيد الاحتياط للمشترك.
+            </div>
+
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - نظام القروض الموحد © 2026
+        </div>
+    </div>
+
+</body>
+</html>
