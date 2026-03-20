@@ -7,24 +7,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-green: #2e7d32;
-            --dark-green: #1b5e20;
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            /* التدرج اللوني المطلوب من الصفحة الرئيسية */
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
             --accent-gold: #fbc02d;
-            /* توحيد لون الخلفية مع باقي الصفحات */
-            --soft-bg: #f4f7f4; 
         }
 
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            /* استخدام التدرج الناعم المعتمد في الموقع */
-            background: linear-gradient(135deg, #f4f7f4 0%, #ffffff 100%);
-            color: #333;
-            padding: 20px;
+            /* تطبيق الخلفية الموحدة */
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
+            padding: 20px;
         }
 
         .container {
@@ -40,24 +41,25 @@
             align-items: center;
             gap: 8px;
             text-decoration: none;
-            color: var(--primary-green);
+            color: var(--text-color);
             font-weight: 700;
             margin-bottom: 25px;
-            background: white;
-            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
             border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
             transition: 0.3s;
         }
 
         .back-btn:hover {
+            background: white;
             transform: translateX(5px);
-            background: var(--primary-green);
-            color: white;
+            border-color: var(--primary-dark);
         }
 
         .hero-header {
-            background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
             color: white;
             padding: 40px;
             border-radius: 30px;
@@ -68,16 +70,16 @@
 
         .hero-header h1 { margin: 0; font-size: 32px; }
         .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 18px; }
-        
+
         .spiritual-banner {
-            background: #fff9c4;
-            border: 2px dashed var(--accent-gold);
+            background: white;
+            border: 3px solid var(--accent-gold);
             padding: 20px;
             border-radius: 20px;
             text-align: center;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
-            color: var(--dark-green);
+            color: var(--text-color);
             margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
@@ -89,17 +91,18 @@
         }
 
         .benefit-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            border-bottom: 5px solid var(--primary-green);
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
             transition: 0.3s;
         }
 
         .benefit-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+            background: white;
+            border-color: var(--primary-dark);
         }
 
         .card-header {
@@ -109,8 +112,8 @@
             margin-bottom: 20px;
             font-size: 20px;
             font-weight: 700;
-            color: var(--dark-green);
-            border-bottom: 1px solid #f0f0f0;
+            color: var(--text-color);
+            border-bottom: 2px solid #e8f5e9;
             padding-bottom: 10px;
         }
 
@@ -121,29 +124,35 @@
         }
 
         .benefit-item {
-            font-size: 15px;
+            font-size: 15.5px;
             padding: 12px 0;
             display: flex;
             gap: 12px;
             font-weight: 600;
-            color: #444;
+            color: #333;
             line-height: 1.6;
+            border-bottom: 1px dashed #c8e6c9;
         }
 
-        .benefit-item span { color: var(--accent-gold); font-size: 18px; }
+        .benefit-item:last-child { border-bottom: none; }
+        .benefit-item span { color: var(--primary-dark); font-size: 20px; }
 
         .footer-note {
             margin-top: 40px;
             text-align: center;
-            font-weight: 600;
-            color: #777;
-            padding: 20px;
-            border-top: 1px solid #ddd;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         @media (max-width: 600px) {
-            .hero-header h1 { font-size: 24px; }
-            .spiritual-banner { font-size: 18px; }
+            .hero-header h1 { font-size: 26px; }
+            .spiritual-banner { font-size: 19px; }
+            .benefit-card { padding: 20px; }
         }
     </style>
 </head>
@@ -177,18 +186,18 @@
             <div class="benefit-card">
                 <div class="card-header">🏥 الخدمات والمقدرات</div>
                 <div class="benefit-list">
-                    <div class="benefit-item"><span>✦</span> الاستفادة من مقدرات الجمعية (كراسي / طاولات / خيمة / صوتيات / مستلزمات طبية / ...إلى آخره) مجاناً بناءً للنظام (عند توفرها).</div>
-                    <div class="benefit-item"><span>✦</span> الاستفادة من الحسومات مع المؤسسات التجارية والأطباء وغيرهما المتفق معهم.</div>
+                    <div class="benefit-item"><span>✦</span> الاستفادة من مقدرات الجمعية (كراسي / طاولات / خيمة / صوتيات / مستلزمات طبية) مجاناً.</div>
+                    <div class="benefit-item"><span>✦</span> الاستفادة من الحسومات مع المؤسسات التجارية والأطباء المتفق معهم.</div>
                     <div class="benefit-item"><span>✦</span> الاستفادة من الأدوية التي تعرض من قبل الجمعية مجاناً.</div>
-                    <div class="benefit-item"><span>✦</span> الاستفادة من مشروع (خيراً يره) إن كان بحاجة، ضمن النظام والاستطاعة.</div>
+                    <div class="benefit-item"><span>✦</span> الاستفادة من مشروع (خيراً يره) إن كان بحاجة، ضمن النظام.</div>
                 </div>
             </div>
 
             <div class="benefit-card">
                 <div class="card-header">🎓 التنمية والأنشطة العامة</div>
                 <div class="benefit-list">
-                    <div class="benefit-item"><span>✦</span> الاستفادة من الأنشطة العامة (احتفالات / ندوات / لقاءات / .. إلى آخره) عند إقامتها.</div>
-                    <div class="benefit-item"><span>✦</span> الاستفادة من الدورات التي تجريها الجمعية (قرآن / كمبيوتر / رسم / تصوير / ثقافة / إسعافات / .. إلى آخره) عند إقامتها.</div>
+                    <div class="benefit-item"><span>✦</span> الاستفادة من الأنشطة العامة (احتفالات / ندوات / لقاءات) عند إقامتها.</div>
+                    <div class="benefit-item"><span>✦</span> الاستفادة من الدورات (قرآن / كمبيوتر / رسم / ثقافة / إسعافات) عند إقامتها.</div>
                     <div class="benefit-item"><span>✦</span> الاستفادة من العلاقات العامة التي تنشؤها الجمعية.</div>
                 </div>
             </div>
@@ -197,14 +206,14 @@
                 <div class="card-header">🌙 المساعدات والمنح</div>
                 <div class="benefit-list">
                     <div class="benefit-item"><span>✦</span> الاستفادة من المساعدات (المالية / العينية) الخارجية المخصصة للجمعية.</div>
-                    <div class="benefit-item"><span>✦</span> الاستفادة من نسبة الخمس الوارد إلى الجمعية (إن كان محتاجاً) بعد تحصيل إجازة.</div>
+                    <div class="benefit-item"><span>✦</span> الاستفادة من نسبة الخمس الوارد إلى الجمعية (إن كان محتاجاً).</div>
                 </div>
             </div>
 
         </div>
 
         <div class="footer-note">
-            جميع هذه الفوائد تخضع للنظام الداخلي للجمعية ولضوابط الاستحقاق المقررة.
+            جميع هذه الفوائد تخضع للنظام الداخلي للجمعية ولضوابط الاستحقاق المقررة لعام 2026
         </div>
     </div>
 
