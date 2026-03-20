@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ضوابط الهاتف والمجموعة - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-whatsapp: #25d366;
+            --accent-red: #d32f2f;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 28px; }
+
+        .group-section {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 8px solid var(--accent-whatsapp);
+        }
+
+        .meeting-phone-section {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 8px solid var(--accent-red);
+        }
+
+        .section-h2 {
+            color: var(--text-color);
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .item-list { list-style: none; padding: 0; margin: 0; }
+
+        .rule-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            gap: 15px;
+            font-weight: 600;
+            line-height: 1.6;
+            font-size: 15px;
+            color: #444;
+        }
+
+        .rule-item:last-child { border-bottom: none; }
+
+        .rule-num {
+            background: #f1f8e9;
+            color: var(--primary-dark);
+            min-width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 25px;
+            font-weight: 700;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>ضوابط الهاتف والغروب</h1>
+            <p>قواعد التواصل الرسمي لمجموعات جمعية قاضي الحوائج</p>
+        </div>
+
+        <div class="group-section">
+            <h2 class="section-h2">📱 ضوابط المجموعة (الغروب الرسمي)</h2>
+            <div class="item-list">
+                <div class="rule-item"><span class="rule-num">1</span> تهدف هذه المجموعة إلى التنسيق الرسمي ، تبادل الإعلانات الهامة ، ومناقشة الأمور المتعلقة بأعمال الجمعية فقط .</div>
+                <div class="rule-item"><span class="rule-num">2</span> يمنع نشر أي محتوى خارج عن نشاط الجمعية وأهدافها .</div>
+                <div class="rule-item"><span class="rule-num">3</span> الالتزام بلغة راقية في التعامل وتجنب أي سخرية أو هجوم شخصي .</div>
+                <div class="rule-item"><span class="rule-num">4</span> يفضل تقليل الرسائل الصوتية قدر الإمكان واستبدالها بنصوص مكتوبة لسهولة البحث والرجوع إليها ، إلا في حالات الضرورة .</div>
+                <div class="rule-item"><span class="rule-num">5</span> مراعاة أوقات الإرسال ( 8 صباحاً إلى 10 مساءاً ) إلا في الحالات الطارئة جداً .</div>
+                <div class="rule-item"><span class="rule-num">6</span> في حال رغب المشترك بمغادرة المجموعة يجب إرسال تنبيه للإدارة قبل الخروج .</div>
+                <div class="rule-item"><span class="rule-num">7</span> تحذف أي رسالة مخالفة للضوابط والقوانين من قبل الإدارة .</div>
+                <div class="rule-item"><span class="rule-num">8</span> في حال تكرار المخالفة ، يتم تنبيه المخالف وفي المرة الثانية قد يتم استبعاده من المجموعة .</div>
+                <div class="rule-item"><span class="rule-num">9</span> صورة البر وفيل التي توضع على موقع الجمعية فقط شعارها الخاص .</div>
+                <div class="rule-item"><span class="rule-num">10</span> لا يحق لأي احد الرد على أي متصل من المشتركين إلا الإدارة .</div>
+                <div class="rule-item"><span class="rule-num">11</span> عندما يقوم المشترك بتغيير رقم هاتفه عليه تبليغ الإدارة بشكل فوري .</div>
+                <div class="rule-item"><span class="rule-num">12</span> يمنع توجيه الاهانات على المجموعة وغيرها .</div>
+                <div class="rule-item"><span class="rule-num">13</span> يمنع الخروج عن صلب الموضوع المطروح خلال المناقشة على غروب الإدارة .</div>
+            </div>
+        </div>
+
+        <div class="meeting-phone-section">
+            <h2 class="section-h2">🔇 استخدام الهاتف أثناء الجلسات</h2>
+            <div class="item-list">
+                <div class="rule-item"><span class="rule-num">1</span> يسمح إدخال الهاتف إلى الجلسات الخاصة بالجمعية لكن ضمن ضوابط .</div>
+                <div class="rule-item"><span class="rule-num">2</span> يمنع استخدام الهاتف ضمن وقت الجلسة .</div>
+                <div class="rule-item"><span class="rule-num">3</span> يمنع التصوير أو تسجيل صوت أثناء الجلسة .</div>
+                <div class="rule-item"><span class="rule-num">4</span> يجب وضع التلفون صامت إثناء فترة الجلسة .</div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            جميع الضوابط تخضع لرقابة إدارة جمعية قاضي الحوائج © 2026
+        </div>
+    </div>
+
+</body>
+</html>
