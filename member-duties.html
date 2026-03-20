@@ -11,18 +11,21 @@
             --primary-med: #2e7d32;
             --primary-light: #e8f5e9;
             --accent-blue: #0277bd;
-            --bg-body: #f7faf7;
+            /* توحيد لون الخلفية */
+            --bg-body: #f4f7f4; 
         }
 
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            background-color: var(--bg-body);
+            /* استخدام التدرج الموحد للموقع */
+            background: linear-gradient(135deg, #f4f7f4 0%, #ffffff 100%);
             color: #333;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
         .container {
@@ -31,7 +34,7 @@
             animation: fadeIn 0.8s ease-out;
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         .back-btn {
             display: inline-flex;
@@ -45,6 +48,13 @@
             padding: 8px 18px;
             border-radius: 50px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-med);
+            color: white;
+            transform: translateX(5px);
         }
 
         .header-section {
@@ -70,11 +80,15 @@
             background: white;
             padding: 25px;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
+            border: 1px solid rgba(0,0,0,0.02);
         }
 
-        .member-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .member-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+        }
 
         .card-title {
             font-weight: 700;
@@ -98,24 +112,24 @@
             font-weight: 600;
         }
 
-        .task-item::before { content: '💠'; color: var(--primary-med); font-size: 12px; }
+        .task-item::before { content: '💠'; color: var(--primary-med); font-size: 12px; flex-shrink: 0; margin-top: 3px; }
 
-        /* صندوق الحقوق والمساهمة */
         .footer-cta {
-            margin-top: 30px;
-            background: var(--primary-dark);
+            margin-top: 40px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-med) 100%);
             color: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 25px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 20px;
             text-align: center;
+            box-shadow: 0 10px 25px rgba(27, 94, 32, 0.2);
         }
 
         .cta-item strong { display: block; font-size: 18px; margin-bottom: 5px; }
-        .cta-item span { font-size: 13px; opacity: 0.8; }
+        .cta-item span { font-size: 13px; opacity: 0.9; }
 
         @media (max-width: 600px) {
             .header-section h1 { font-size: 24px; }
