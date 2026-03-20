@@ -7,24 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-dark: #1b5e20;
-            --primary-med: #2e7d32;
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
             --accent-red: #d32f2f;
             --accent-gold: #fbc02d;
-            --bg-body: #f4f7f4; 
         }
 
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            /* توحيد الخلفية مع باقي الصفحات */
-            background: linear-gradient(135deg, #f4f7f4 0%, #ffffff 100%);
-            color: #333;
-            padding: 20px;
+            background: var(--bg-gradient); /* توحيد لون الخلفية */
+            color: #222;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
+            padding: 20px;
         }
 
         .container {
@@ -33,30 +33,31 @@
             animation: fadeIn 0.8s ease-out;
         }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
         .back-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             text-decoration: none;
-            color: var(--primary-dark);
+            color: var(--text-color);
             font-weight: 700;
-            margin-bottom: 20px;
-            background: white;
-            padding: 10px 20px;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
             border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
             transition: 0.3s;
         }
 
-        .back-btn:hover { background: var(--primary-med); color: white; transform: translateX(5px); }
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
 
         .main-header {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-med) 100%);
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
             color: white;
-            padding: 40px 20px;
-            border-radius: 25px 25px 0 0;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
             text-align: center;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
@@ -65,15 +66,16 @@
         .main-header p { opacity: 0.9; margin-top: 10px; font-size: 16px; }
 
         .section-box {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 35px;
-            border-radius: 0 0 25px 25px;
+            border-radius: 0 0 30px 30px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
             margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
         h3.section-title {
-            color: var(--primary-dark);
+            color: var(--text-color);
             border-right: 5px solid var(--accent-gold);
             padding-right: 15px;
             margin-bottom: 25px;
@@ -87,26 +89,20 @@
         }
 
         .rule-card {
-            background: #f9fbf9;
+            background: white;
             padding: 18px;
-            border-right: 4px solid var(--primary-med);
+            border-right: 4px solid var(--primary-dark);
             border-radius: 12px;
             font-size: 15px;
             line-height: 1.7;
             font-weight: 600;
-            color: #444;
-            transition: 0.3s;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
         }
-
-        .rule-card:hover { background: #f1f8f1; transform: scale(1.01); }
 
         .rule-card span { color: var(--primary-dark); font-weight: 700; margin-left: 5px; }
 
-        /* تنسيق الجدول الاحترافي */
-        .price-table-container {
-            margin-top: 40px;
-            overflow-x: auto;
-        }
+        .price-table-container { margin-top: 40px; overflow-x: auto; }
 
         table {
             width: 100%;
@@ -115,65 +111,50 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
         }
 
-        th {
-            background: var(--primary-med);
-            color: white;
-            padding: 18px;
-            text-align: center;
-            font-size: 16px;
-        }
+        th { background: var(--primary-dark); color: white; padding: 18px; text-align: center; }
 
-        td {
-            padding: 18px;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-            font-weight: 700;
-            color: #333;
-        }
+        td { padding: 18px; text-align: center; border-bottom: 1px solid #f0f0f0; font-weight: 700; color: #333; }
 
-        tr:last-child td { border-bottom: none; }
         tr:hover { background-color: #f1f8e9; }
 
-        .category-label { font-size: 22px; color: var(--primary-dark); }
-
-        /* ملاحظات هامة */
         .important-note {
-            background: #fff9c4; /* لون ذهبي فاتح للتنبيه */
+            background: #fff9c4;
             border: 2px dashed var(--accent-gold);
             padding: 25px;
             border-radius: 20px;
             margin-top: 35px;
+            color: #5d4037;
         }
 
-        .important-note h3 {
-            color: #af8600;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-        }
+        .important-note h3 { color: #af8600; margin-top: 0; display: flex; align-items: center; gap: 10px; }
 
         .document-tag {
             display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary-dark);
+            background: white;
+            color: var(--text-color);
             padding: 6px 15px;
             border-radius: 50px;
             font-size: 14px;
             margin: 5px;
-            border: 1px solid #c8e6c9;
+            border: 1px solid var(--primary-light);
             font-weight: 700;
         }
 
-        @media (max-width: 600px) {
-            .rules-grid { grid-template-columns: 1fr; }
-            .main-header h1 { font-size: 24px; }
-            .section-box { padding: 20px; }
+        footer {
+            text-align: center;
+            color: var(--text-color);
+            font-size: 14px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            background: rgba(255,255,255,0.3);
+            padding: 15px;
+            border-radius: 20px;
+            width: 100%;
         }
+
+        @media (max-width: 600px) { .rules-grid { grid-template-columns: 1fr; } .section-box { padding: 20px; } }
     </style>
 </head>
 <body>
@@ -183,7 +164,7 @@
 
         <header class="main-header">
             <h1>شروط وإجراءات الانتساب</h1>
-            <p>نظام موحد يضمن العدالة والشفافية لجميع أعضاء جمعية قاضي الحوائج</p>
+            <p>نظام موحد يضمن العدالة والشفافية لجميع الأعضاء لعام 2026</p>
         </header>
 
         <div class="section-box">
@@ -197,22 +178,11 @@
                     <div class="rule-card"><span>4.</span> دفع ثمن البطاقة مباشرة عند استلامها بعد الموافقة.</div>
                     <div class="rule-card"><span>5.</span> دفع ثمن "كرسي" لمرة واحدة بعد قبول الانتساب.</div>
                 </div>
-                <div style="margin-top: 20px; padding: 10px; background: #f0f4f8; border-radius: 10px;">
-                    <strong style="color: #2c3e50; margin-left: 10px;">📎 المستندات المطلوبة:</strong>
+                <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 15px;">
+                    <strong style="color: var(--text-color);">📎 المستندات المطلوبة:</strong>
                     <span class="document-tag">صورة شمسية</span>
                     <span class="document-tag">إخراج قيد فردي</span>
                     <span class="document-tag">أو صورة عن الهوية</span>
-                </div>
-            </div>
-
-            <div style="margin-bottom: 40px;">
-                <h3 class="section-title">🎁 الحقوق والامتيازات</h3>
-                <div class="rules-grid">
-                    <div class="rule-card"><span>6.</span> الاستفادة من (قروض/استثمار/تكفل/مساعدات) بعد مرور 3 أشهر.</div>
-                    <div class="rule-card"><span>7.</span> الاستفادة من (كراسي/طاولات/خيمة) مجاناً، مع تحمل مسؤولية أي ضرر.</div>
-                    <div class="rule-card"><span>8.</span> يحق للمنتسب الاطلاع على معلوماته الشخصية فقط دون الآخرين.</div>
-                    <div class="rule-card"><span>9.</span> إمكانية إضافة أي مبلغ مالي إلى الرصيد الأصلي في أي وقت.</div>
-                    <div class="rule-card"><span>10.</span> توكيل المندوب لإجراء المعاملات عبر استمارة تفويض رسمية.</div>
                 </div>
             </div>
 
@@ -228,41 +198,39 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="category-label">أ</td>
+                            <td style="font-size: 22px; color: var(--text-color);">أ</td>
                             <td>900,000 ل.ل</td>
                             <td>10 $</td>
                         </tr>
                         <tr>
-                            <td class="category-label">ب</td>
+                            <td style="font-size: 22px; color: var(--text-color);">ب</td>
                             <td>450,000 ل.ل</td>
                             <td>5 $</td>
                         </tr>
                         <tr>
-                            <td class="category-label">ت</td>
+                            <td style="font-size: 22px; color: var(--text-color);">ت</td>
                             <td>250,000 ل.ل</td>
                             <td>3 $</td>
                         </tr>
                     </tbody>
                 </table>
-                <p style="font-size: 14px; color: #666; margin-top: 15px; font-style: italic;">* ملاحظة: يمكن للمشترك الزيادة عن فئة (أ) حسب رغبته الشخصية.</p>
+                <p style="font-size: 14px; color: #444; margin-top: 15px; font-weight: 600;">* ملاحظة: يمكن للمشترك الزيادة عن فئة (أ) حسب رغبته.</p>
             </div>
 
             <div class="important-note">
-                <h3>⚠️ ملاحظات هامة والتزامات قانونية</h3>
-                <ul style="font-weight: 600; font-size: 15px; line-height: 1.9; color: #5d4037;">
-                    <li>يجب الالتزام بدفع الاشتراك والتبرع الشهري بناءً على النظام الداخلي.</li>
-                    <li style="color: var(--accent-red);">في حال التأخر لمدة شهرين، يترتب "تبرع جزائي" يذهب لرصيد الجمعية ولا يحق المطالبة به.</li>
-                    <li>لا يحق لأي مشترك فرض تنسيب أي شخص آخر للجمعية.</li>
-                    <li><strong>السرية:</strong> يجب على المشترك المحافظة التامة على سرية معلومات الجمعية.</li>
-                    <li><strong>حالة الوفاة:</strong> يؤخذ بوصية المشترك، أو يصرف الرصيد في (عزاء، قضاء دين، تبرئة ذمة دينية) إن توفر المبلغ.</li>
-                    <li><strong>الجنسية:</strong> الانتساب محصور باللبنانيين فقط.</li>
+                <h3>⚠️ ملاحظات هامة</h3>
+                <ul style="font-weight: 600; font-size: 15px; line-height: 1.9;">
+                    <li>الالتزام بدفع الاشتراك والتبرع الشهري بناءً على النظام الداخلي.</li>
+                    <li style="color: var(--accent-red);">التأخر لمدة شهرين يستوجب "تبرعاً جزائياً" لصالح الجمعية.</li>
+                    <li>المحافظة التامة على سرية معلومات الجمعية.</li>
+                    <li>الانتساب محصور باللبنانيين فقط ويخضع لموافقة الهيئة الإدارية.</li>
                 </ul>
             </div>
 
         </div>
 
-        <footer style="text-align: center; color: #777; font-size: 14px; margin-bottom: 40px; font-weight: 600;">
-            جميع الحقوق محفوظة لجمعية قاضي الحوائج © 2026
+        <footer>
+            جميع الشروط تخضع للنظام الداخلي لجمعية قاضي الحوائج © 2026
         </footer>
     </div>
 
