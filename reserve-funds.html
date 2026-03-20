@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرصيد الاحتياطي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-teal: #00796b;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 30px; }
+        .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 17px; }
+
+        .intro-box {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border-right: 6px solid var(--accent-teal);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            line-height: 1.8;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .reserve-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.5);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            display: flex;
+            gap: 15px;
+            transition: 0.3s;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            border-color: var(--primary-dark);
+        }
+
+        .number-badge {
+            background: var(--primary-dark);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .item-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 24px; }
+            .reserve-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>موارد الاستفادة من الرصيد الاحتياطي</h1>
+            <p>نظام الحماية والاستقرار المالي للمشتركين</p>
+        </div>
+
+        <div class="intro-box">
+            يجب أن يكون للجمعية رصيد احتياطي لمواجهة الظروف الطارئة أو المتغيرات المفاجئة والغير متوقعة ، ولكي لا يكون الاحتياط مدمج بالرصيد الأصلي للصندوق ، من هنا اقتراح وضعه برصيد الاحتياط للمشترك ، وفي نفس الوقت يكون داعماً له .
+        </div>
+
+        <div class="reserve-grid">
+            <div class="item-card"><div class="number-badge">1</div><div class="item-text">لا يجوز استخدام رصيد الاحتياط إلا بقرار من الجمعية أو المجلس الإدارة وفقاً للنظام .</div></div>
+            <div class="item-card"><div class="number-badge">2</div><div class="item-text">لا يجوز توزيع رصيد الاحتياط إلا في حالات التصفية ووفق الإجراءات النظامية .</div></div>
+            <div class="item-card"><div class="number-badge">3</div><div class="item-text">تعويض الخسائر المالية الناتجة عن انخفاض الإرادات .</div></div>
+            <div class="item-card"><div class="number-badge">4</div><div class="item-text">معالجة العجز في الميزانية السنوية .</div></div>
+            <div class="item-card"><div class="number-badge">5</div><div class="item-text">سداد الالتزامات الطارئة والغير متوقعة .</div></div>
+            <div class="item-card"><div class="number-badge">6</div><div class="item-text">تمويل المشاريع الجديدة وتعزيز القروض ( والابتعاد عن الرصيد الأصلي ) .</div></div>
+            <div class="item-card"><div class="number-badge">7</div><div class="item-text">تعزيز الاستقرار المالي من خلال دعم السيول النقدية عند الحاجة .</div></div>
+            <div class="item-card"><div class="number-badge">8</div><div class="item-text">دعم المشتركين بنسبة القروض والاستغناء عن الكفيل ( إذا أجاز النظام ) .</div></div>
+            <div class="item-card"><div class="number-badge">9</div><div class="item-text">إيجاد الحماية المالية للمشترك والكفيل من خلال رصيد الاحتياط .</div></div>
+            <div class="item-card"><div class="number-badge">10</div><div class="item-text">في حال تحمل المشترك أي بند جزائي يسحب من الاحتياط وليس من الرصيد الأصلي .</div></div>
+            <div class="item-card"><div class="number-badge">11</div><div class="item-text">تدعيم الأنشطة إن كان هناك مصاريف ذائدة وعدم تحميل المشترك .</div></div>
+            <div class="item-card"><div class="number-badge">12</div><div class="item-text">يحق للإدارة التصرف برصيد الاحتياط ضمن دراسة معينة ولكن لا يحق لها التصرف بالرصيد الأصلي .</div></div>
+            <div class="item-card"><div class="number-badge">13</div><div class="item-text">يستفاد من الرصيد الاحتياط في تامين الاحتياجات المرتبطة بالمشترك ( بطاقة / فلورا / قبعة / غذاء / عشاء / نقل ....) دون تحميل المشترك .</div></div>
+            <div class="item-card"><div class="number-badge">14</div><div class="item-text">يستفاد من الرصيد الاحتياط في تسديد ديون المشتركين ( من خلال تخصيص نسبة معينة ) .</div></div>
+            <div class="item-card"><div class="number-badge">15</div><div class="item-text">في حال تعرض أي مشروع لخسارة لا قدر الله يسند من الاحتياط وليس الرصيد الأصلي للمشترك .</div></div>
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - أمانة الصندوق والاحتياط © 2026
+        </div>
+    </div>
+
+</body>
+</html>
