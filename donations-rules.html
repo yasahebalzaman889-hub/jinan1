@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ضوابط التبرعات - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-gold: #fbc02d;
+            --accent-blue: #1565c0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 28px; }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            display: flex;
+            gap: 15px;
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            border-color: var(--primary-dark);
+        }
+
+        .num-circle {
+            background: var(--primary-dark);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .card-content {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .special-box {
+            grid-column: 1 / -1;
+            background: #e3f2fd;
+            border: 2px solid var(--accent-blue);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .special-box h3 {
+            margin-top: 0;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 22px; }
+            .donation-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>ضوابط أموال التبرعات</h1>
+            <p>نظام الشفافية والنزاهة المالية لجمعية قاضي الحوائج</p>
+        </div>
+
+        <div class="donation-grid">
+            <div class="info-card"><div class="num-circle">1</div><div class="card-content">جمع التبرعات عبر حسابات الجمعية المعتمدة فقط . ( نقداً أو تحويلاً )</div></div>
+            <div class="info-card"><div class="num-circle">2</div><div class="card-content">تودع التبرعات في حساب باسم الجمعية وليس باسم أفراد .</div></div>
+            <div class="info-card"><div class="num-circle">3</div><div class="card-content">تسجيل كل وارد وصادر بسجلات مالية واضحة وفواتير رسمية .</div></div>
+            <div class="info-card"><div class="num-circle">4</div><div class="card-content">يمنع استخدام الأموال لمصالح شخصية ويستثنى منها الأجور المعتمدة للعاملين .</div></div>
+            <div class="info-card"><div class="num-circle">5</div><div class="card-content">عدم قبول أي أموال من مصادر غير مشروعة أو مشبوهة .</div></div>
+            <div class="info-card"><div class="num-circle">6</div><div class="card-content">لا يجوز تحويل التبرعات لغرض أخر إلا بموافقة المتبرعين أو حسب النظام .</div></div>
+            <div class="info-card"><div class="num-circle">7</div><div class="card-content">الصرف يتم بقرارات رسمية من قبل الإدارة .</div></div>
+            <div class="info-card"><div class="num-circle">8</div><div class="card-content">اعتماد معايير واضحة لتحديد المستفيدين .</div></div>
+            <div class="info-card"><div class="num-circle">9</div><div class="card-content">التبرعات الشهرية والجزائية التي تدفع من قبل المشتركين ، تعود إلى الرصيد الخاص بالجمعية .</div></div>
+            <div class="info-card"><div class="num-circle">10</div><div class="card-content">التبرعات الخارجية التي ترد إلى الجمعية تصرف بحسب عنوانها .</div></div>
+            
+            <div class="special-box">
+                <h3>📊 بند 11: توزيع التبرعات الخارجية الداعمة</h3>
+                <p style="font-weight: 700; font-size: 16px;">التبرعات الخارجية التي ترد دعماً للجمعية تصرف على الشكل التالي :</p>
+                <ul style="font-weight: 600; line-height: 1.8;">
+                    <li>🔹 60% إلى الرصيد الاحتياط للمشترك .</li>
+                    <li>🔹 40% إلى الرصيد الخاص بالجمعية .</li>
+                </ul>
+            </div>
+
+            <div class="info-card"><div class="num-circle">12</div><div class="card-content">المشترك الذي يحصل على ثلاث إنذارات خلال السنة عليه دفع 3$ تبرع .</div></div>
+            <div class="info-card"><div class="num-circle">13</div><div class="card-content">المشترك الذي يتخلف عن دفع التبرعات المستحقة عليه يحق للإدارة اتخاذ الإجراءات المناسبة بحقه .</div></div>
+            <div class="info-card"><div class="num-circle">14</div><div class="card-content">يحق للإدارة جلب إي تبرع للصندوق من إي جهة ويوزع ضمن القوانين والأنظمة الموضوعة .</div></div>
+            <div class="info-card"><div class="num-circle">15</div><div class="card-content">المشترك بفئة الدولار يدفع التبرع بالدولار / المشترك بفئة اللبناني يدفع التبرع باللبناني / المشترك بفئة الدولار واللبناني يدفع التبرع باللبناني .</div></div>
+            <div class="info-card"><div class="num-circle">16</div><div class="card-content">يحق للمجمد من قبل الإدارة لمدة محددة الاستفادة من التبرعات .</div></div>
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - الرقابة المالية العامة © 2026
+        </div>
+    </div>
+
+</body>
+</html>
