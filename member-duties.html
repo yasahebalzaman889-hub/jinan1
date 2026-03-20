@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المشترك - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;
+            --primary-med: #2e7d32;
+            --primary-light: #e8f5e9;
+            --accent-blue: #0277bd;
+            --bg-body: #f7faf7;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background-color: var(--bg-body);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-section {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            border-bottom: 6px solid var(--primary-med);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .header-section h1 { color: var(--primary-dark); margin: 0; font-size: 30px; }
+        .header-section p { color: #666; margin-top: 10px; font-weight: 600; }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .member-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+
+        .member-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--primary-med);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        .task-list { list-style: none; padding: 0; margin: 0; }
+
+        .task-item {
+            font-size: 14.5px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            line-height: 1.6;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .task-item::before { content: '💠'; color: var(--primary-med); font-size: 12px; }
+
+        /* صندوق الحقوق والمساهمة */
+        .footer-cta {
+            margin-top: 30px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .cta-item strong { display: block; font-size: 18px; margin-bottom: 5px; }
+        .cta-item span { font-size: 13px; opacity: 0.8; }
+
+        @media (max-width: 600px) {
+            .header-section h1 { font-size: 24px; }
+            .footer-cta { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="header-section">
+            <h1>دليل حقوق ومهام المشترك</h1>
+            <p>أهلاً بك عضواً فاعلاً ومساهماً في مسيرة جمعية قاضي الحوائج</p>
+        </div>
+
+        <div class="member-grid">
+            
+            <div class="member-card">
+                <div class="card-title">📜 الالتزام بالنظام والقوانين</div>
+                <div class="task-list">
+                    <div class="task-item">الالتزام بالنظام الأساسي واللوائح الداخلية للجمعية.</div>
+                    <div class="task-item">احترام القوانين والتقيد بقرارات مجلس الإدارة.</div>
+                    <div class="task-item">الحفاظ على سمعة الجمعية وعدم الإساءة لها أو لأعضائها.</div>
+                    <div class="task-item">احترام بقية الأعضاء والتعاون مع الإدارة بكل مودة.</div>
+                    <div class="task-item">الحفاظ على مقدرات الجمعية المالية واللوجستية.</div>
+                </div>
+            </div>
+
+            <div class="member-card" style="border-top: 4px solid var(--accent-blue);">
+                <div class="card-title">💰 الالتزامات المالية والوثائق</div>
+                <div class="task-list">
+                    <div class="task-item">دفع المستحقات (اشتراك/تبرع) للمندوب في المواعيد المحددة.</div>
+                    <div class="task-item">الوفاء بأي التزامات مالية أخرى مترتبة عليه للجمعية.</div>
+                    <div class="task-item">تأمين المستندات أو المعاملات القانونية التي تطلب لخدمته.</div>
+                    <div class="task-item">تقديم الشكاوى أو المقترحات عبر الصندوق المخصص لذلك.</div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="card-title">🤝 المشاركة والتطوير</div>
+                <div class="task-list">
+                    <div class="task-item">المشاركة في اجتماعات وجلسات الجمعية العمومية.</div>
+                    <div class="task-item">التصويت على القرارات والمشاركة في الانتخابات الداخلية.</div>
+                    <div class="task-item">المساهمة الفعالة في أنشطة وبرامج الجمعية المتنوعة.</div>
+                    <div class="task-item">طرح الأفكار والمبادرات التي تساعد في إنماء الجمعية.</div>
+                    <div class="task-item">التطوع أو تقديم الدعم للجمعية حسب القدرة والإمكانية.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-cta">
+            <div class="cta-item">
+                <strong>💡 رأيك يهمنا</strong>
+                <span>نستقبل أفكارك لتطوير العمل دائماً</span>
+            </div>
+            <div class="cta-item">
+                <strong>🗳️ صوتك أمانة</strong>
+                <span>شاركونا في صنع القرار والانتخابات</span>
+            </div>
+            <div class="cta-item">
+                <strong>💪 معاً ننمو</strong>
+                <span>بوفائك بالتزاماتك نستمر في خدمتك</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
