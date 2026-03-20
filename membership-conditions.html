@@ -10,28 +10,30 @@
             --primary-dark: #1b5e20;
             --primary-med: #2e7d32;
             --accent-red: #d32f2f;
-            --gold-soft: #fff9c4;
-            --bg-gray: #f8f9fa;
+            --accent-gold: #fbc02d;
+            --bg-body: #f4f7f4; 
         }
 
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            background-color: var(--bg-gray);
+            /* توحيد الخلفية مع باقي الصفحات */
+            background: linear-gradient(135deg, #f4f7f4 0%, #ffffff 100%);
             color: #333;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
         .container {
             width: 100%;
             max-width: 950px;
-            animation: fadeIn 0.8s ease-in;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         .back-btn {
             display: inline-flex;
@@ -42,27 +44,40 @@
             font-weight: 700;
             margin-bottom: 20px;
             background: white;
-            padding: 8px 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
+
+        .back-btn:hover { background: var(--primary-med); color: white; transform: translateX(5px); }
 
         .main-header {
-            background: var(--primary-dark);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-med) 100%);
             color: white;
-            padding: 30px;
-            border-radius: 20px 20px 0 0;
+            padding: 40px 20px;
+            border-radius: 25px 25px 0 0;
             text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        .main-header h1 { margin: 0; font-size: 28px; }
+        .main-header h1 { margin: 0; font-size: 30px; }
+        .main-header p { opacity: 0.9; margin-top: 10px; font-size: 16px; }
 
         .section-box {
             background: white;
-            padding: 30px;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 35px;
+            border-radius: 0 0 25px 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h3.section-title {
+            color: var(--primary-dark);
+            border-right: 5px solid var(--accent-gold);
+            padding-right: 15px;
             margin-bottom: 25px;
+            font-size: 22px;
         }
 
         .rules-grid {
@@ -72,24 +87,24 @@
         }
 
         .rule-card {
-            background: #f9f9f9;
-            padding: 15px;
+            background: #f9fbf9;
+            padding: 18px;
             border-right: 4px solid var(--primary-med);
-            border-radius: 8px;
-            font-size: 14.5px;
-            line-height: 1.6;
+            border-radius: 12px;
+            font-size: 15px;
+            line-height: 1.7;
             font-weight: 600;
+            color: #444;
+            transition: 0.3s;
         }
 
-        .rule-card span {
-            color: var(--primary-dark);
-            font-weight: 700;
-            margin-left: 5px;
-        }
+        .rule-card:hover { background: #f1f8f1; transform: scale(1.01); }
 
-        /* تنسيق الجدول */
+        .rule-card span { color: var(--primary-dark); font-weight: 700; margin-left: 5px; }
+
+        /* تنسيق الجدول الاحترافي */
         .price-table-container {
-            margin-top: 30px;
+            margin-top: 40px;
             overflow-x: auto;
         }
 
@@ -97,61 +112,67 @@
             width: 100%;
             border-collapse: collapse;
             background: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
         }
 
         th {
             background: var(--primary-med);
             color: white;
-            padding: 15px;
+            padding: 18px;
             text-align: center;
+            font-size: 16px;
         }
 
         td {
-            padding: 15px;
+            padding: 18px;
             text-align: center;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #f0f0f0;
             font-weight: 700;
+            color: #333;
         }
 
+        tr:last-child td { border-bottom: none; }
         tr:hover { background-color: #f1f8e9; }
 
-        .category-label {
-            font-size: 20px;
-            color: var(--primary-dark);
-        }
+        .category-label { font-size: 22px; color: var(--primary-dark); }
 
         /* ملاحظات هامة */
         .important-note {
-            background: #fff3e0;
-            border: 1px solid #ffe0b2;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
+            background: #fff9c4; /* لون ذهبي فاتح للتنبيه */
+            border: 2px dashed var(--accent-gold);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 35px;
         }
 
         .important-note h3 {
-            color: #e65100;
+            color: #af8600;
             margin-top: 0;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 20px;
         }
 
         .document-tag {
             display: inline-block;
-            background: #e3f2fd;
-            color: #1565c0;
-            padding: 4px 12px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 6px 15px;
             border-radius: 50px;
-            font-size: 13px;
+            font-size: 14px;
             margin: 5px;
+            border: 1px solid #c8e6c9;
+            font-weight: 700;
         }
 
         @media (max-width: 600px) {
             .rules-grid { grid-template-columns: 1fr; }
+            .main-header h1 { font-size: 24px; }
+            .section-box { padding: 20px; }
         }
     </style>
 </head>
@@ -162,13 +183,13 @@
 
         <header class="main-header">
             <h1>شروط وإجراءات الانتساب</h1>
-            <p>نظام موحد يضمن العدالة والشفافية لجميع الأعضاء</p>
+            <p>نظام موحد يضمن العدالة والشفافية لجميع أعضاء جمعية قاضي الحوائج</p>
         </header>
 
         <div class="section-box">
             
-            <div style="margin-bottom: 30px;">
-                <h3 style="color: var(--primary-dark); border-bottom: 2px solid #eee; padding-bottom: 10px;">📋 إجراءات ومتطلبات الطلب</h3>
+            <div style="margin-bottom: 40px;">
+                <h3 class="section-title">📋 إجراءات ومتطلبات الطلب</h3>
                 <div class="rules-grid">
                     <div class="rule-card"><span>1.</span> يحق لأي لبناني الانتساب شرط التمتع بالمواصفات الأخلاقية والإنسانية.</div>
                     <div class="rule-card"><span>2.</span> تعبئة استمارة الانتساب الخاصة وتقديمها للإدارة للدراسة.</div>
@@ -176,16 +197,16 @@
                     <div class="rule-card"><span>4.</span> دفع ثمن البطاقة مباشرة عند استلامها بعد الموافقة.</div>
                     <div class="rule-card"><span>5.</span> دفع ثمن "كرسي" لمرة واحدة بعد قبول الانتساب.</div>
                 </div>
-                <div style="margin-top: 15px;">
-                    <strong>📎 المستندات المطلوبة:</strong>
+                <div style="margin-top: 20px; padding: 10px; background: #f0f4f8; border-radius: 10px;">
+                    <strong style="color: #2c3e50; margin-left: 10px;">📎 المستندات المطلوبة:</strong>
                     <span class="document-tag">صورة شمسية</span>
                     <span class="document-tag">إخراج قيد فردي</span>
                     <span class="document-tag">أو صورة عن الهوية</span>
                 </div>
             </div>
 
-            <div style="margin-bottom: 30px;">
-                <h3 style="color: var(--primary-dark); border-bottom: 2px solid #eee; padding-bottom: 10px;">🎁 الحقوق والامتيازات</h3>
+            <div style="margin-bottom: 40px;">
+                <h3 class="section-title">🎁 الحقوق والامتيازات</h3>
                 <div class="rules-grid">
                     <div class="rule-card"><span>6.</span> الاستفادة من (قروض/استثمار/تكفل/مساعدات) بعد مرور 3 أشهر.</div>
                     <div class="rule-card"><span>7.</span> الاستفادة من (كراسي/طاولات/خيمة) مجاناً، مع تحمل مسؤولية أي ضرر.</div>
@@ -196,7 +217,7 @@
             </div>
 
             <div class="price-table-container">
-                <h3 style="color: var(--primary-dark); text-align: center;">💳 جدول فئات الاشتراك الشهري</h3>
+                <h3 class="section-title" style="text-align: center; border: none;">💳 جدول فئات الاشتراك الشهري</h3>
                 <table>
                     <thead>
                         <tr>
@@ -223,12 +244,12 @@
                         </tr>
                     </tbody>
                 </table>
-                <p style="font-size: 13px; color: #666; margin-top: 10px;">* ملاحظة: يمكن للمشترك الزيادة عن فئة (أ) حسب رغبته.</p>
+                <p style="font-size: 14px; color: #666; margin-top: 15px; font-style: italic;">* ملاحظة: يمكن للمشترك الزيادة عن فئة (أ) حسب رغبته الشخصية.</p>
             </div>
 
             <div class="important-note">
                 <h3>⚠️ ملاحظات هامة والتزامات قانونية</h3>
-                <ul style="font-weight: 600; font-size: 14.5px; line-height: 1.8;">
+                <ul style="font-weight: 600; font-size: 15px; line-height: 1.9; color: #5d4037;">
                     <li>يجب الالتزام بدفع الاشتراك والتبرع الشهري بناءً على النظام الداخلي.</li>
                     <li style="color: var(--accent-red);">في حال التأخر لمدة شهرين، يترتب "تبرع جزائي" يذهب لرصيد الجمعية ولا يحق المطالبة به.</li>
                     <li>لا يحق لأي مشترك فرض تنسيب أي شخص آخر للجمعية.</li>
@@ -240,8 +261,8 @@
 
         </div>
 
-        <footer style="text-align: center; color: #888; font-size: 13px; margin-bottom: 40px;">
-            جميع الشروط تخضع للنظام الداخلي لجمعية قاضي الحوائج © 2026
+        <footer style="text-align: center; color: #777; font-size: 14px; margin-bottom: 40px; font-weight: 600;">
+            جميع الحقوق محفوظة لجمعية قاضي الحوائج © 2026
         </footer>
     </div>
 
