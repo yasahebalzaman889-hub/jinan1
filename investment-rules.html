@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ضوابط الاستثمار - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-blue: #1976d2;
+            --accent-gold: #fbc02d;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 32px; }
+        .hero-header p { opacity: 0.9; margin-top: 10px; font-size: 18px; }
+
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-bottom: 2px solid #e8f5e9;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .item-list { list-style: none; padding: 0; margin: 0; }
+
+        .investment-item {
+            font-size: 15px;
+            padding: 12px 0;
+            display: flex;
+            gap: 12px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.6;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .investment-item:last-child { border-bottom: none; }
+        .investment-item span { color: var(--primary-dark); font-weight: 700; flex-shrink: 0; width: 25px; }
+
+        .profit-highlight {
+            grid-column: 1 / -1;
+            background: #fff9c4;
+            border: 2px solid var(--accent-gold);
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .profit-highlight h3 { color: #5d4037; margin-bottom: 15px; }
+        .percentage-flex {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .percent-box {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .percent-box strong { font-size: 24px; color: var(--primary-dark); display: block; }
+
+        .footer-note {
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-color);
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 24px; }
+            .investment-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>ضوابط ومعايير الاستثمار</h1>
+            <p>نحو تنمية مستدامة وحماية لرأس مال المشتركين</p>
+        </div>
+
+        <div class="investment-grid">
+            
+            <div class="category-card">
+                <div class="card-title">⚖️ الضوابط العامة والشرعية</div>
+                <div class="item-list">
+                    <div class="investment-item"><span>1.</span> الالتزام بأحكام الشريعة الإسلامية للاستثمار .</div>
+                    <div class="investment-item"><span>2.</span> يمنع الاستثمار في الأنشطة المحرمة أو الغير قانونية .</div>
+                    <div class="investment-item"><span>3.</span> الحفاظ على رأس مال الجمعية وعدم تعريضه لمخاطر عالية .</div>
+                    <div class="investment-item"><span>4.</span> تنويع الاستثمارات وعدم حصرها في مجال واحد .</div>
+                    <div class="investment-item"><span>15.</span> لا يحق لأي شخص فرض أي مشروع على الجمعية .</div>
+                    <div class="investment-item"><span>22.</span> توجيه عوائد الاستثمار لخدمة أهداف الجمعية فقط .</div>
+                    <div class="investment-item"><span>23.</span> منع استخدام ألإرباح لأغراض شخصية أو خارجية .</div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-title">📝 دراسة المشاريع والقرارات</div>
+                <div class="item-list">
+                    <div class="investment-item"><span>5.</span> مطلوب موافقة الإدارة على أي قرار استثمار .</div>
+                    <div class="investment-item"><span>6.</span> أي مشروع موافق عليه يجب التوقيع عليه من قبل الإدارة .</div>
+                    <div class="investment-item"><span>7.</span> أي مشروع مقترح يجب دارسته من قبل الإدارة بكل جوانبه .</div>
+                    <div class="investment-item"><span>8.</span> أي مقترح لمشروع استثمار يقدم ضمن استمارة خاصة إلى الإدارة للدراسة .</div>
+                    <div class="investment-item"><span>10.</span> مشروع الاستثمار يكون بموافقة الإدارة ويحدد من قبلهم الجهة الفنية المتخصصة المنفذة ، ويكون المشروع بإشراف رئيس الجمعية بكل التفاصيل .</div>
+                    <div class="investment-item"><span>13.</span> أي مشروع يوافق عليه يصبح نافذ وملزم للموافقين .</div>
+                    <div class="investment-item"><span>17.</span> توثيق جميع العمليات الاستثمارية بعقود رسمية .</div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-title">🏦 التمويل والرقابة</div>
+                <div class="item-list">
+                    <div class="investment-item"><span>9.</span> كل مشاريع الاستثمار تكون باسم الجمعية وليس باسم أشخاص ولكن إنتاجية المشروع تكون للمشتركين .</div>
+                    <div class="investment-item"><span>11.</span> المشروع الذي يوافق عليه لتنفيذ يصرف من رصيد الخاصة بالصندوق والرصيد الاحتياط للمشتركين .</div>
+                    <div class="investment-item"><span>14.</span> المستفيدين من الاستثمار فقط الذين يوافقون على المشروع .</div>
+                    <div class="investment-item"><span>18.</span> الاستعانة بخبراء مختصين عند الحاجة .</div>
+                    <div class="investment-item"><span>19.</span> إعداد تقارير دورية عن الأداء الاستثماري .</div>
+                    <div class="investment-item"><span>20.</span> إخضاع الاستثمارات للمراجعة والتدقيق .</div>
+                    <div class="investment-item"><span>21.</span> الإفصاح لأعضاء الجمعية عن نتائج الاستثمارات .</div>
+                    <div class="investment-item"><span>24.</span> يحق للمجمد من قبل الإدارة لمدة محددة الاستفادة من الاستثمار .</div>
+                </div>
+            </div>
+
+            <div class="profit-highlight">
+                <h3>💰 توزيع العوائد والمسؤولية المالية</h3>
+                <div class="percentage-flex">
+                    <div class="percent-box"><strong>60 %</strong> للرصيد الأصلي للمشتركين</div>
+                    <div class="percent-box"><strong>40 %</strong> لرصيد صندوق الجمعية</div>
+                </div>
+                <p style="margin-top: 20px; font-weight: 600; font-size: 15px; color: #5d4037;">
+                    (بند 12): أي مشروع يوافق عليه من قبل الجميع ويتعرض لأي خسارة أو ضرر يكون على عاتق الجميع 
+                    <br>
+                    <small>تتم التغطية من رصيد الاحتياط إن توفر، وإلا فمن الرصيد الأصلي.</small>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - قسم التطوير والاستثمار © 2026
+        </div>
+    </div>
+
+</body>
+</html>
