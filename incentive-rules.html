@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ضوابط التحفيز - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1b5e20;  
+            --primary-mid: #43a047;
+            --accent-gold: #ffd600;
+            --bg-gradient: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-mid);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: var(--primary-mid); color: white; transform: translateX(5px); }
+
+        .hero-header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-mid) 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px rgba(27, 94, 32, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-header h1 { margin: 0; font-size: 30px; position: relative; z-index: 2; }
+        .hero-header::after {
+            content: "⭐";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 80px;
+            opacity: 0.1;
+        }
+
+        .incentive-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .incentive-card {
+            background: white;
+            padding: 18px 25px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 4px solid #e0e0e0;
+            transition: 0.3s;
+        }
+
+        .incentive-card:hover {
+            transform: scale(1.02);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        .icon-box {
+            background: #fff9c4;
+            color: #fbc02d;
+            width: 45px;
+            height: 45px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .card-content {
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .update-note {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border: 1px dashed var(--primary-mid);
+        }
+
+        .footer-note { text-align: center; padding: 40px; font-weight: 700; color: var(--primary-dark); }
+
+        @media (max-width: 600px) {
+            .hero-header h1 { font-size: 24px; }
+            .incentive-card { padding: 15px; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>🌟 ضوابط وسياسة التحفيز</h1>
+            <p>تقدير العطاء وتشجيع التميز في رحلة الجمعية</p>
+        </div>
+
+        <div class="incentive-grid">
+            <div class="incentive-card">
+                <div class="icon-box">🎯</div>
+                <div class="card-content">1- يكون التحفيز مرتبطاً بتحقيق الأهداف المعتمدة للجمعية .</div>
+            </div>
+
+            <div class="incentive-card">
+                <div class="icon-box">📢</div>
+                <div class="card-content">2- يمنح التحفيز بناءاً على معايير واضحة ومعلنة للجميع .</div>
+            </div>
+
+            <div class="incentive-card">
+                <div class="icon-box">📜</div>
+                <div class="card-content">3- يشترط الالتزام بأنظمة ولوائح الجمعية لاستحقاق التحفيز .</div>
+            </div>
+
+            <div class="incentive-card">
+                <div class="icon-box">🤝</div>
+                <div class="card-content">4- تراعى العدالة وتكافؤ الفرص بين جميع المستحقين .</div>
+            </div>
+
+            <div class="incentive-card">
+                <div class="icon-box">🖋️</div>
+                <div class="card-content">5- يعتمد التحفيز من الجهة المخولة رسمياً في الجمعية .</div>
+            </div>
+
+            <div class="incentive-card">
+                <div class="icon-box">💰</div>
+                <div class="card-content">6- يكون التحفيز ضمن ميزانية المعتمدة .</div>
+            </div>
+
+            <div class="incentive-card">
+                <div class="icon-box">📁</div>
+                <div class="card-content">7- يوثق جميع ما يتعلق بالتحفيز في سجلات رسمية .</div>
+            </div>
+
+            <div class="incentive-card" style="background: #fffde7;">
+                <div class="icon-box" style="background: #ffebee; color: #d32f2f;">🚫</div>
+                <div class="card-content" style="color: #b71c1c;">8- لا يمنح أي تحفيز في حال وجود مخالفات إدارية أو مالية .</div>
+            </div>
+        </div>
+
+        <div class="update-note">
+            🔄 يراجع نظام التحفيز بشكل دوري ويحدث عند الحاجة
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - لجنة الموارد البشرية والتقدير © 2026
+        </div>
+    </div>
+
+</body>
+</html>
