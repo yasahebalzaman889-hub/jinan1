@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسليم الاشتراكات والكشوفات - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+            --accent-blue: #1976d2;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--primary-light);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { background: white; transform: translateX(5px); border-color: var(--primary-dark); }
+
+        .hero-header {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-header h1 { margin: 0; font-size: 26px; }
+
+        /* تصميم الجدول الزمني */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-right: 6px solid var(--primary-dark);
+            transition: 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.02);
+            border-right-color: var(--accent-blue);
+        }
+
+        .date-box {
+            background: #f1f8e9;
+            color: var(--primary-dark);
+            padding: 10px 15px;
+            border-radius: 12px;
+            min-width: 130px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 14px;
+            border: 1px solid var(--primary-light);
+        }
+
+        .action-box {
+            flex: 1;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .step-num {
+            background: var(--primary-dark);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .timeline-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .date-box { width: 100%; box-sizing: border-box; }
+            .hero-header h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><span>→</span> العودة للرئيسية</a>
+
+        <div class="hero-header">
+            <h1>الجدول الزمني لتسليم الاشتراكات والكشوفات</h1>
+            <p>دورة العمل المالي الشهري المنتظم</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="step-num">1</div>
+                <div class="date-box">من 1 إلى 10 الشهر</div>
+                <div class="action-box">تسليم المستحقات ( اشتراك / تبرع / تسديد / ... ) من المشترك إلى المندوب .</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-num">2</div>
+                <div class="date-box">من 10 إلى 15 الشهر</div>
+                <div class="action-box">تسليم المستحقات ( اشتراك / تبرع / تسديد / ... ) من المندوب إلى آمين الصندوق .</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-num">3</div>
+                <div class="date-box">من 15 إلى 20 الشهر</div>
+                <div class="action-box">إجراء جرده وتدقيق مالي ، مع إدخال الحسابات بملفات المخصصة وأرشفتها .</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-num">4</div>
+                <div class="date-box">من 20 إلى 25 الشهر</div>
+                <div class="action-box">إرسال الأموال إلى الأمانات .</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-num">5</div>
+                <div class="date-box">من 25 إلى 29 الشهر</div>
+                <div class="action-box">تحضير وطباعة الكشوفات الجديدة .</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="step-num">6</div>
+                <div class="date-box">من 29 إلى 30 أو 31</div>
+                <div class="action-box">رفع الكشوفات إلى المندوبين .</div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            جمعية قاضي الحوائج - المكتب المالي الإداري © 2026
+        </div>
+    </div>
+
+</body>
+</html>
