@@ -18,7 +18,7 @@
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            background: var(--bg-gradient); /* توحيد لون الخلفية */
+            background: var(--bg-gradient); 
             color: #222;
             min-height: 100vh;
             display: flex;
@@ -112,6 +112,7 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
         }
 
         th { background: var(--primary-dark); color: white; padding: 18px; text-align: center; }
@@ -119,6 +120,9 @@
         td { padding: 18px; text-align: center; border-bottom: 1px solid #f0f0f0; font-weight: 700; color: #333; }
 
         tr:hover { background-color: #f1f8e9; }
+
+        .donation-table { margin-top: 20px; border: 2px solid var(--primary-light); }
+        .donation-table th { background: var(--text-color); }
 
         .important-note {
             background: #fff9c4;
@@ -161,7 +165,7 @@
 <body>
 
     <div class="container">
-       
+        
 
         <header class="main-header">
             <h1>شروط وإجراءات الانتساب</h1>
@@ -216,6 +220,29 @@
                     </tbody>
                 </table>
                 <p style="font-size: 14px; color: #444; margin-top: 15px; font-weight: 600;">* ملاحظة: يمكن للمشترك الزيادة عن فئة (أ) حسب رغبته.</p>
+
+                <h3 class="section-title" style="text-align: center; border: none; margin-top: 30px;">💰 جدول التبرع الشهري</h3>
+                <table class="donation-table">
+                    <thead>
+                        <tr>
+                            <th>البيان</th>
+                            <th>القيمة</th>
+                            <th>التفاصيل</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>التبرع الشهري (لبناني)</td>
+                            <td>100,000 ل.ل</td>
+                            <td>مئة ألف ليرة لبنانية</td>
+                        </tr>
+                        <tr>
+                            <td>التبرع الشهري (دولار)</td>
+                            <td>10 $</td>
+                            <td>عشرة دولار</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="important-note">
