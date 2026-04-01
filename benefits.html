@@ -9,7 +9,6 @@
         :root {
             --primary-dark: #2e7d32;  
             --primary-light: #81c784; 
-            /* التدرج اللوني المطلوب من الصفحة الرئيسية */
             --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
             --text-color: #1b5e20;
             --accent-gold: #fbc02d;
@@ -18,7 +17,6 @@
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
-            /* تطبيق الخلفية الموحدة */
             background: var(--bg-gradient);
             color: #222;
             min-height: 100vh;
@@ -51,6 +49,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 2px solid var(--primary-light);
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .back-btn:hover {
@@ -138,6 +137,15 @@
         .benefit-item:last-child { border-bottom: none; }
         .benefit-item span { color: var(--primary-dark); font-size: 20px; }
 
+        .note-highlight {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+            border-top: 1px solid #ffcdd2;
+            padding-top: 10px;
+        }
+
         .footer-note {
             margin-top: 40px;
             text-align: center;
@@ -161,7 +169,6 @@
 
     <div class="container">
         
-
         <div class="hero-header">
             <h1>فوائد الانتساب للجمعية</h1>
             <p>امتيازات وخدمات شاملة لأعضاء أسرة جمعية قاضي الحوائج</p>
@@ -192,6 +199,7 @@
                     <div class="benefit-item"><span>✦</span> الاستفادة من الأدوية التي تعرض من قبل الجمعية مجاناً.</div>
                     <div class="benefit-item"><span>✦</span> الاستفادة من مشروع (خيراً يره) إن كان بحاجة، ضمن النظام.</div>
                 </div>
+                <strong class="note-highlight">⚠️ ملاحظة: لا يحق للمشترك استعارة مقدرات الجمعية (كراسي وغيرها ....) إلى غير المشترك بالجمعية.</strong>
             </div>
 
             <div class="benefit-card">
@@ -217,8 +225,10 @@
             جميع هذه الفوائد تخضع للنظام الداخلي للجمعية ولضوابط الاستحقاق المقررة لعام 2026
         </div>
     </div>
+
 <a href="javascript:void(0)" onclick="location.replace('index.html')" class="back-btn">
     <span>→</span> العودة للرئيسية
 </a>
+
 </body>
 </html>
