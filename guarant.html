@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشروط القانونية للمسؤول المالي - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32; 
+            --primary-light: #81c784;
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            direction: rtl;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* الهيدر */
+        .header {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 20px 10px 20px;
+            text-align: center;
+        }
+
+        .title-page {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0;
+            border-bottom: 3px solid var(--primary-light);
+            display: inline-block;
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        /* حاوية المحتوى */
+        .content-card {
+            background: rgba(255, 255, 255, 0.92);
+            width: 90%;
+            max-width: 750px;
+            margin: 20px;
+            padding: 30px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            animation: fadeInUp 0.7s ease-out;
+            box-sizing: border-box;
+            border: 1px solid white;
+        }
+
+        .conditions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* تصميم عناصر الشروط */
+        .condition-item {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            border: 1px solid rgba(129, 199, 132, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .condition-item:hover {
+            transform: translateX(-5px);
+            border-color: var(--primary-dark);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .condition-num {
+            background: var(--primary-dark);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .condition-text {
+            font-size: 15.5px;
+            color: #2c3e50;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* زر العودة الموحد */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: var(--primary-dark);
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .content-card { padding: 25px 15px; }
+            .condition-text { font-size: 14.5px; }
+            .title-page { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title-page">الشروط القانونية للمسؤول المالي</div>
+</div>
+
+<div class="content-card">
+    <div class="conditions-list">
+        <div class="condition-item"><div class="condition-num">١</div><div class="condition-text">أن يكون منتسب إلى الجمعية .</div></div>
+        <div class="condition-item"><div class="condition-num">٢</div><div class="condition-text">أن يكون لديه ١٠ مشتركين بالحد الأدنى .</div></div>
+        <div class="condition-item"><div class="condition-num">٣</div><div class="condition-text">أن يتمتع بالمواصفات الأخلاقية.</div></div>
+        <div class="condition-item"><div class="condition-num">٤</div><div class="condition-text">القدرة على استخدام برامج المحاسبة EXCEL.</div></div>
+        <div class="condition-item"><div class="condition-num">٥</div><div class="condition-text">أن يجيد القراءة والكتابة.</div></div>
+        <div class="condition-item"><div class="condition-num">٦</div><div class="condition-text">أن لا يكون عليه أحكام قضائية.</div></div>
+        <div class="condition-item"><div class="condition-num">٧</div><div class="condition-text">أن يكون لديه خبرة في المحاسبة أو الإدارة المالية .</div></div>
+        <div class="condition-item"><div class="condition-num">٨</div><div class="condition-text">معرفة إعداد الإيصالات .</div></div>
+        <div class="condition-item"><div class="condition-num">٩</div><div class="condition-text">الأمانة والنزاهة وحسن حفظ المستندات.</div></div>
+        <div class="condition-item"><div class="condition-num">١٠</div><div class="condition-text">عدم وجود سوابق مالية أو قانونية .</div></div>
+        <div class="condition-item"><div class="condition-num">١١</div><div class="condition-text">القدرة على التعامل مع البنوك والتحويلات والفواتير .</div></div>
+        <div class="condition-item"><div class="condition-num">١٢</div><div class="condition-text">القدرة على التعامل مع الناس واستقطاب مشتركين جدد .</div></div>
+        <div class="condition-item"><div class="condition-num">١٣</div><div class="condition-text">فهم قوانين الجمعيات والتمويل والتبرعات.</div></div>
+    </div>
+</div>
+
+<a href="javascript:void(0)" onclick="location.replace('index.html')" class="back-btn">
+    <span>→</span> العودة للرئيسية
+</a>
+
+</body>
+</html>
